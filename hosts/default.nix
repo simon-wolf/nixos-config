@@ -24,7 +24,7 @@ in
 {
   starlite2 = lib.nixosSystem {
     inherit system;
-    specialArgs = { inherit inputs user location };
+    specialArgs = { inherit inputs user location; };
     modules = [
       ./starlite2
       ./configuration.nix
