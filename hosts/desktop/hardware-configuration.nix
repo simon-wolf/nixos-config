@@ -27,12 +27,16 @@
     [ { device = "/dev/disk/by-uuid/159480c6-e7b3-4dfd-811e-1a9f2c4fe2f4"; }
     ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
+  networking = {
+    useDHCP = false;
+    hostName = "starlite2";
+    networkManager.enable = true;
+    interfaces = {
+      wlp1s0 = {
+        useDHCP = true;
+      };
+    };
+  };
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

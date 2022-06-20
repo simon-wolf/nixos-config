@@ -1,38 +1,26 @@
 {
-  description = "Simon Wolf's Base Configuration";
+  description = "Simon Wolf's NixOS and Home-Manager Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager }:
+  outputs = inputs @ { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-	config.allowUnfree = true;
-      };
-
-      lib = nixpkgs.lib;
+      user = "simon";
+      location = "$HOME/.nixos-setup";
     in {
-      nixosConfigurations = {
-        simon-lite2 = lib.nixosSystem {
-          inherit system;
-	  modules = [
-	    ./configuration.nix
-	    home-manager.nixosModules.home-manager {
-              home-manager.useGlobalPkgs = true;
-	      home-manager.useUserPackages = true;
-	      home-manager.users.simon = {
-	        imports = [ ./home.nix ];
-	      };
-	    }
-	  ];
-	};
-      };
+      nixosConfigurations = (
+        import ./hosts {				# Imports ./hosts/default.nix
+          inherit (nixpkgs) lib;			# Import lib from nixpkgs
+	  inherit inputs nixpkgs home-manager system user location;	# Inherit home-manager so that it does not need to be redefined
+	}
+      );
     };
 }

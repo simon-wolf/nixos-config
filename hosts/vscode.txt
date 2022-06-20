@@ -1,8 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+#
+# Main system configuration
+#
 
-{ config, pkgs, lib, ... }:
+{ config, lib, pkgs, inputs, user, location, ... }:
 
 let
   # bash script to let dbus know about important env variables and
@@ -70,7 +70,7 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./simon-lite2/hardware-configuration.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
