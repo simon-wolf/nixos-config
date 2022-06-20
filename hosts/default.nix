@@ -42,7 +42,7 @@ in
 
   starlite4 = lib.nixosSystem {
     inherit system;
-    specialArgs = { inherit inputs user location };
+    specialArgs = { inherit inputs user location; };
     modules = [
       ./starlite4
       ./configuration.nix
@@ -60,7 +60,7 @@ in
 
   desktop = lib.nixosSystem {
     inherit system;
-    specialArgs = { inherit inputs user location };
+    specialArgs = { inherit inputs user location; };
     modules = [
       ./desktop
       ./configuration.nix

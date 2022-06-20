@@ -51,39 +51,39 @@
       VISUAL = "nvim";
     };
     systemPackages = with pkgs; [
-    _1password-gui
-    alacritty
-    beekeeper-studio
-    insomnia
-    lazygit
-    libreoffice
-    mongodb-compass
-    neovim
-    signal-desktop
-    teams
-    vscode-with-extensions
+      _1password-gui
+      alacritty
+      beekeeper-studio
+      insomnia
+      lazygit
+      libreoffice
+      mongodb-compass
+      neovim
+      signal-desktop
+      teams
+      vscode-with-extensions
 
-    aspell
-    aspellDicts.uk
-    fontmatrix
-    git
-    jq
-    maim	# Screenshot utility
-    nano	# Text editor
-    nnn		# Terminal file manager
-    ranger	# VIM-inspired terminal file manager
-    tree	# Directory listing
-    unzip
-    wget
-    zathura
-    zip
+      aspell
+      aspellDicts.uk
+      fontmatrix
+      git
+      jq
+      maim	# Screenshot utility
+      nano	# Text editor
+      nnn		# Terminal file manager
+      ranger	# VIM-inspired terminal file manager
+      tree	# Directory listing
+      unzip
+      wget
+      zathura
+      zip
 
-    bashmount	# bash script for managing removable media with udisks
-    iwgtk	# graphical wifi management utility
-    pavucontrol	# volume control
-    udisks	# External drive manipulation
+      bashmount	# bash script for managing removable media with udisks
+      iwgtk	# graphical wifi management utility
+      pavucontrol	# volume control
+      udisks	# External drive manipulation
     ];
-  ];
+  };
 
   fonts = {
     enableDefaultFonts = true;
@@ -116,9 +116,18 @@
     };
   };
 
-  # Flakes
   nix = {
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
     package = pkgs.nixFlakes;
     extraOptions = "experimental-features = nix-command flakes";
   };
+
+  nixpkgs.config.allowUnfree = true;
 }

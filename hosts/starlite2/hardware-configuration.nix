@@ -30,7 +30,7 @@
   networking = {
     useDHCP = false;
     hostName = "starlite2";
-    networkManager.enable = true;
+    networkmanager.enable = true;
     interfaces = {
       wlp1s0 = {
         useDHCP = true;

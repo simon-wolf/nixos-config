@@ -6,7 +6,7 @@
 
 {
   imports = 
-    (import ../modules/editor) ++
+    (import ../modules/editors) ++
     (import ../modules/shell);
 
   home = {

@@ -18,9 +18,9 @@
       ];
       
       extraConfig = ''
-        syntax enable					'' Syntax highlighting
-        highlight Comment cterm=italic gui=italic	'' Comments are italic
-        set number					'' Show line numbers
+        syntax enable					" Syntax highlighting
+        highlight Comment cterm=italic gui=italic	" Comments are italic
+        set number					" Show line numbers
       '';
     };
   };
