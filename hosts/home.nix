@@ -72,16 +72,16 @@
 
   home.file.".config/sway" = {
     source = ../config/sway;
-    recursive = true;
-  };
-
-  home.file.".config/waybar" = {
-    source = ../config/waybar;
     recursive = false;
   };
 
   home.file.".config/sway/scripts/lower_brightness.sh" = {
     source = ../config/sway/scripts/lower_brightness.sh;
     executable = true;
+  };
+
+  home.file.".config/waybar" = {
+    source = ../config/waybar;
+    recursive = true;
   };
 }
