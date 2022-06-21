@@ -51,37 +51,8 @@
       VISUAL = "nvim";
     };
     systemPackages = with pkgs; [
-      _1password-gui
-      alacritty
-      beekeeper-studio
-      insomnia
-      lazygit
-      libreoffice
-      mongodb-compass
-      neovim
-      signal-desktop
-      teams
-      vscode-with-extensions
-
-      aspell
-      aspellDicts.uk
-      fontmatrix
-      git
-      jq
-      maim	# Screenshot utility
       nano	# Text editor
-      nnn		# Terminal file manager
-      ranger	# VIM-inspired terminal file manager
-      tree	# Directory listing
-      unzip
-      wget
-      zathura
-      zip
-
-      bashmount	# bash script for managing removable media with udisks
-      iwgtk	# graphical wifi management utility
-      pavucontrol	# volume control
-      udisks	# External drive manipulation
+      wget      # Retrieve files via HTTP, HTTPS & FTP
     ];
   };
 
@@ -130,4 +101,8 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  system = {
+    stateVersion = "22.05";
+  };
 }
