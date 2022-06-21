@@ -8,7 +8,7 @@
   programs = {
     zsh = {
       enable = true;
-      dotDir = ".config/zsh_nix";
+      dotDir = ".config/zsh";
       enableAutosuggestions = true;
       enableSyntaxHighlighting = true;
       history.size = 10000;                 # Maximum events in internal history
@@ -16,7 +16,7 @@
 
       initExtra = ''
         # Prompt
-        autoload -U prompt_purification_setup; prompt_purification_setup
+        autoload -Uz prompt_purification_setup; prompt_purification_setup
       '';
     };
   };
