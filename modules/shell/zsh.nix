@@ -16,7 +16,7 @@
 
       initExtra = ''
         # Prompt
-        autoload -U promp_purification_setup; prompt_purification_setup
+        autoload -U prompt_purification_setup; prompt_purification_setup
       '';
     };
   };
