@@ -10,11 +10,11 @@ The combination of using a flake and Home Manager means that it is very easy to 
 
 ## File & Folder Structures
 
-### NisOS & Home Manager
+### NixOS & Home Manager
 
 The `flake.nix` file defines the Nix packages URL and Home Manager URL along with the user account name and the location of the configuration files. For its configuration it imports the contents of the `hosts/default.nix` file.
 
-The `hosts/default.nix` file sets up the configurations used for each computer. Each configuration then references both 'core' and per-computer modules; one each for NixOS itself and for Home Manager. For example, my `desktop` configuration uses the `hosts/configuration.nix` NixOS confiuration file which is common across all computers and the `hosts/desktop/default.nix` NixOS configuration file which is specific to the `desktop` computer. It also uses the `hosts/home.nix` Home Manager configuration file which is common across all computers and the `hosts/desktop/home.nix` Home Manager configuration file which is specific to the `desktop` computer.
+The `hosts/default.nix` file sets up the configurations used for each computer. Each configuration then references both 'core' and per-computer modules; one each for NixOS itself and for Home Manager. For example, my `desktop` configuration uses the `hosts/configuration.nix` NixOS configuration file which is common across all computers and the `hosts/desktop/default.nix` NixOS configuration file which is specific to the `desktop` computer. It also uses the `hosts/home.nix` Home Manager configuration file which is common across all computers and the `hosts/desktop/home.nix` Home Manager configuration file which is specific to the `desktop` computer.
 
 ### Modules
 
