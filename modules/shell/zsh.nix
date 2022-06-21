@@ -21,7 +21,7 @@
     };
   };
 
-  home.file.".config/zsh_nix/external/prompt_purification_setup" = {
+  home.file.".config/zsh/external/prompt_purification_setup" = {
     source = ../../config/zsh/external/prompt_purification_setup;
   };
 
