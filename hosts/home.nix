@@ -70,8 +70,8 @@
     recursive = true;
   };
 
-  home.file.".config/sway" = {
-    source = ../config/sway;
+  home.file.".config/sway/config" = {
+    source = ../config/sway/config;
     recursive = false;
   };
 
