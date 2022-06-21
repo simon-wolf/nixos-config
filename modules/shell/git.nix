@@ -9,7 +9,7 @@
       userName = "Simon Wolf";
       userEmail = "swolf@fastmail.co.uk";
       extraConfig = {
-        pull.ff = only;
+        pull.merge = true;
       };
     };
   };
