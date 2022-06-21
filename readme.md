@@ -10,7 +10,7 @@ The combination of using a flake and Home Manager means that it is very easy to 
 
 ## File & Folder Structures
 
-### NisOX & Home Manager
+### NisOS & Home Manager
 
 The `flake.nix` file defines the Nix packages URL and Home Manager URL along with the user account name and the location of the configuration files. For its configuration it imports the contents of the `hosts/default.nix` file.
 
