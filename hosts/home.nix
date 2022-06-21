@@ -46,7 +46,7 @@
       insomnia
       libreoffice
       mongodb-compass
-      neovim
+      #neovim
       signal-desktop
       teams
       vscode-with-extensions
