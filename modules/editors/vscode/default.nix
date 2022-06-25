@@ -38,7 +38,6 @@ let
 in {
   programs = {
     vscode-with-extension = {
-      enable = true;
     };
   };
 }
