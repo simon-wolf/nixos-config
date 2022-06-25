@@ -32,12 +32,14 @@ let
     }
   ];
 
-  vscode-with-extensions = pkgs.vscode-with-extensions.override {
+  vscode_with_extensions = pkgs.vscode-with-extensions.override {
     vscodeExtensions = vscode_extensions;
   };
 in {
   programs = {
-    vscode-with-extension = {
+    vscode = {
+      enable = true;
+      package = vscode_with_extensions;
     };
   };
 }
