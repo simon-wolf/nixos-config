@@ -48,7 +48,6 @@
       mongodb-compass
       signal-desktop
       teams
-      vscode-with-extensions
 
       # Other
       bashmount             # Bash script for managing removable media with udisk
