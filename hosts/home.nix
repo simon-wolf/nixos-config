@@ -62,6 +62,7 @@
 
   programs = {
     home-manager.enable = true;
+    ssh.startAgent = true;
   };
 
   home.file.".config/alacritty" = {
