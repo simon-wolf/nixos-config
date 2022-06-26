@@ -47,3 +47,7 @@ The `config` folder contains configuration files that have not been migrated ove
 nix flake update
 sudo nixos-rebuild switch --flake .#simon-lite2
 ```
+
+## Nix-Shell
+
+...
