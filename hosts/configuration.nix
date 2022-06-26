@@ -57,7 +57,11 @@
   };
 
   # Start OpenSSH agent at login
-  programs.ssh.startAgent = true;
+  programs = {
+    ssh = {
+      startAgent = true;
+    };
+  };
 
   fonts = {
     enableDefaultFonts = true;
