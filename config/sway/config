@@ -32,11 +32,15 @@ set $menu fuzzel | xargs swaymsg exec --
 #output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 #output eDP-1 {
-output "Unknown LC116LF3L01 0x00000000" {
+output "Unknown LC116LF3L01 0x00000000" { #StarLite2
   resolution 1920x1080 position 0,0
   scale 1.0
 }
 
+output "Unknown 0x096F 0x00000000" { # StarLite4
+  resolution 1920x1080 position 0,0
+  scale 1.0
+}
 
 #
 ### Idle configuration
@@ -57,11 +61,11 @@ exec swayidle -w \
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "1:1:AT_Translated_Set_2_keyboard" {
+input type:keyboard {
   xkb_layout gb
 }
 
-input "2321:21128:ALPS0001:00_0911:5288_Touchpad" {
+input type:touchpad {
   natural_scroll enabled
 }
 
