@@ -32,12 +32,14 @@ set $menu fuzzel | xargs swaymsg exec --
 #output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 #output eDP-1 {
-output "Unknown LC116LF3L01 0x00000000" { #StarLite2
+# StarLite2
+output "Unknown LC116LF3L01 0x00000000" {
   resolution 1920x1080 position 0,0
   scale 1.0
 }
 
-output "Unknown 0x096F 0x00000000" { # StarLite4
+# StarLite4
+output "Unknown 0x096F 0x00000000" {
   resolution 1920x1080 position 0,0
   scale 1.0
 }
