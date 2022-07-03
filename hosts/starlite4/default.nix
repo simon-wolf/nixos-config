@@ -7,7 +7,7 @@
 {
   imports =
     [(import ./hardware-configuration.nix)] ++		# Current hardware config
-    [(import ../../modules/desktop/sway/sway.nix];	# Window manager
+    [(import ../../modules/desktop/sway/sway.nix)];	# Window manager
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -17,5 +17,5 @@
   programs = {
     #dconf.enable = true;
     light.enable = true;
-  }
+  };
 }

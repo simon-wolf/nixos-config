@@ -8,31 +8,31 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "usb_storage" "sd_mod" "sdhci_pci" "rtsx_usb_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/74ce853e-62a3-4f53-8a06-c6f5943de3b4";
+    { device = "/dev/disk/by-uuid/d1a0cabb-636f-453d-8f5f-d36a30139499";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/5C26-E72D";
+    { device = "/dev/disk/by-uuid/4B3D-04D3";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/159480c6-e7b3-4dfd-811e-1a9f2c4fe2f4"; }
+    [ { device = "/dev/disk/by-uuid/b87ad60b-b1e3-4b9c-9d55-2c9cf6950dba"; }
     ];
 
   networking = {
     useDHCP = false;
-    hostName = "starlite2";
-    networkManager.enable = true;
+    hostName = "starlite4";
+    networkmanager.enable = true;
     interfaces = {
-      wlp1s0 = {
+      wlp0s12f0 = {
         useDHCP = true;
       };
     };
@@ -40,3 +40,4 @@
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
+
