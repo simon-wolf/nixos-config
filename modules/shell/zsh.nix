@@ -19,6 +19,10 @@
         source $HOME/.config/zsh_nix/external/prompt_purification_setup
         autoload -Uz prompt_purification_setup; prompt_purification_setup
       '';
+
+      shellAliases = {
+        mm = "~/Development/Mindme/scripts/mm";
+      };
     };
   };
 
