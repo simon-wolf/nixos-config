@@ -51,3 +51,19 @@ sudo nixos-rebuild switch --flake .#simon-lite2
 ## Nix-Shell
 
 ...
+
+## To Do
+
+### nix-shell and Elixir
+
+* http://ghedam.at/15978/an-introduction-to-nix-shell
+* https://ghedam.at/15443/a-nix-shell-for-developing-elixir
+* https://til.codes/nix-shell-for-elixir-projects/
+
+### Other
+
+* https://unix.stackexchange.com/a/218050
+* https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/
+* https://fedingo.com/how-to-connect-to-wifi-using-nmcli/
+* https://github.com/wamserma/nixos-check-update
+* https://ianthehenry.com/posts/how-to-learn-nix/introduction/
