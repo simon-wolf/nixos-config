@@ -46,6 +46,7 @@
       insomnia
       libreoffice
       mongodb-compass
+      ngrok
       signal-desktop
       teams
 
