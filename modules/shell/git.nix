@@ -10,6 +10,7 @@
       userEmail = "swolf@fastmail.co.uk";
       extraConfig = {
         pull.rebase = true;
+        init.defaultBranch = "main";
       };
     };
   };
