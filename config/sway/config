@@ -41,7 +41,7 @@ output "Unknown LC116LF3L01 0x00000000" {
 # StarLite4
 output "Unknown 0x096F 0x00000000" {
   resolution 1920x1080 position 0,0
-  scale 1.0
+  scale 1.2
 }
 
 #
