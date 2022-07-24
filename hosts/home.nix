@@ -16,12 +16,14 @@
     packages = with pkgs; [
       # Terminal
       alacritty             # Terminal emulator
+      bc                    # Calculator
       btop                  # Resource manager
       git                   # Git
       jq                    # JSON parser
       lazygit               # Git client
       maim                  # Screenshot utility
       pfetch                # Minimal Fetch
+      programmer-calculator # Calculator
       nnn                   # File Manager
       ranger                # File Manager
       tree                  # Directory Listing
