@@ -23,6 +23,8 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  programs.nix-ld.enable = true;
+
   # Enable sound.
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
