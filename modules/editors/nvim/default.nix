@@ -13,7 +13,10 @@
 
       plugins = with pkgs.vimPlugins; [
         # Syntax
-	vim-nix
+        vim-elixir
+        vim-git
+        vim-json
+        vim-nix
 	vim-markdown
       ];
       
