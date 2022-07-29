@@ -30,6 +30,12 @@ let
       version = "0.0.5";
       sha256 = "01mhzmc8ck2rk8nr9pqgkp2qk508ssx8asis27ll9vjmw38liiys";
     }
+    {
+      name = "vscode-tailwindcss";
+      publisher = "bradlc";
+      version = "0.8.6";
+      sha256 = "v15KuD3eYFCsrworCJ1SZAMkyZKztAwWKmfwmbirleI=";
+    }
   ];
 
   vscode_with_extensions = pkgs.vscode-with-extensions.override {
