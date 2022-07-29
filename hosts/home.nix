@@ -55,7 +55,6 @@
       # Other
       bashmount             # Bash script for managing removable media with udisk
       fontmatrix            # Font viewer
-      fwupd                 # Firmware updater
       iwgtk                 # Graphical WiFi management tool
       udisks                # Removable drive manipulation
       zathura               # PDF viewer

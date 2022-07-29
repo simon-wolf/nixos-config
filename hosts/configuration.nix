@@ -23,6 +23,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Run unpatched dynamic libraries
   programs.nix-ld.enable = true;
 
   # Enable sound.
