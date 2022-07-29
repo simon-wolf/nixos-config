@@ -51,6 +51,7 @@
       ngrok
       signal-desktop
       teams
+      thunderbird
 
       # Other
       bashmount             # Bash script for managing removable media with udisk
