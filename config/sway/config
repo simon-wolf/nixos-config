@@ -41,7 +41,7 @@ output "Unknown LC116LF3L01 0x00000000" {
 # StarLite4
 output "Unknown 0x096F 0x00000000" {
   resolution 1920x1080 position 0,0
-  scale 1.2
+  scale 1.5
 }
 
 #
@@ -68,7 +68,14 @@ input type:keyboard {
 }
 
 input type:touchpad {
+# input "HTIX5288:00 093A:0255 Touchpad" {
   natural_scroll enabled
+  scroll_method two_finger
+#  click_method clickfinger
+#  click_method button_areas
+  tap enabled
+  tap_button_map lrm
+  dwt enabled
 }
 
 
@@ -76,7 +83,7 @@ input type:touchpad {
 ### Misc Settings
 #
 
-font pango: "Inconsolata Nerd Font" 18
+font pango: "Inconsolata Nerd Font" 14
 
 # Notification manager
 exec --no-startup-id mako
