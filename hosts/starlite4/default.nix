@@ -1,5 +1,5 @@
 #
-# System configuration for starlite2
+# System configuration for starlite4
 #
 
 { config, pkgs, user, ... }:
@@ -13,6 +13,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   console.earlySetup = true;  # Use larger font during boot
+
+  console = {
+    packages = with pkgs; [ terminus_font ];
+    font = "ter-i32b";
+    keyMap = "uk";
+  };
 
   programs = {
     #dconf.enable = true;

@@ -14,12 +14,6 @@
     defaultLocale = "en_GB.UTF-8";
   };
 
-  console = {
-    packages = with pkgs; [ terminus_font ];
-    font = "ter-i32b";
-    keyMap = "uk";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

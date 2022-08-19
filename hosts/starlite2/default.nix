@@ -14,6 +14,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   console.earlySetup = true;  # Use larger font during boot
 
+  console = {
+    packages = with pkgs; [ terminus_font ];
+    font = "ter-i32b";
+    keyMap = "uk";
+  };
+
   programs = {
     #dconf.enable = true;
     light.enable = true;
