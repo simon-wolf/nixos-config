@@ -50,6 +50,7 @@
       mongodb-compass
       ngrok
       signal-desktop
+      tdesktop              # Telegram
       teams
       thunderbird
 
