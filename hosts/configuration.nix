@@ -17,6 +17,35 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  hardware =
+    let
+      brother = "Brother_HL-3170CDW_NixOS";
+      brother_ip = "192.168.10.10";
+      xerox = "Xerox_Phaser_6510DN_NixOS";
+      xerox_ip = "192.168.10.11";
+    in
+    {
+      printers = {
+        ensureDefaultPrinter = brother;
+        ensurePrinters = [
+          {
+            name = brother;
+            deviceUri = "ipp://${brother_ip}/ipp";
+            model = "everywhere";
+            description = lib.replaceStrings [ "_" ] [ " " ] brother;
+            location = "Office";
+          }
+          {
+            name = xerox;
+            deviceUri = "ipp://${xerox_ip}/ipp";
+            model = "everywhere";
+            description = lib.replaceStrings [ "_" ] [ " " ] xerox;
+            location = "Office";
+          }
+        ];
+      };
+    };
+
   # Run unpatched dynamic libraries
   programs.nix-ld.enable = true;
 
