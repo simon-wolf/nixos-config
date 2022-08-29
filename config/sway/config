@@ -39,7 +39,8 @@ output "Unknown LC116LF3L01 0x00000000" {
 }
 
 # StarLite4
-output "Unknown 0x096F 0x00000000" {
+# output "Unknown 0x096F 0x00000000" {
+output "eDP-1" {
   resolution 1920x1080 position 0,0
   scale 1.5
   bg $HOME/.config/sway/wallpapers/nix_dark1.png stretch
@@ -58,16 +59,16 @@ output "HDMI-A-5" {
   bg $HOME/.config/sway/wallpapers/nix_dark1.png stretch
 }
 
-workspace 1 output "HDMI-A-5"
-workspace 2 output "HMDI-A-5"
-workspace 3 output "HDMI-A-5"
-workspace 4 output "HDMI-A-5"
-workspace 5 output "HDMI-A-5"
-workspace 6 output "DP-5"
-workspace 7 output "DP-5"
-workspace 8 output "DP-5"
-workspace 9 output "DP-5"
-workspace 0 output "DP-5"
+workspace 1 output "HDMI-A-5" "eDP-1"
+workspace 2 output "HMDI-A-5" "eDP-1"
+workspace 3 output "HDMI-A-5" "eDP-1"
+workspace 4 output "HDMI-A-5" "eDP-1"
+workspace 5 output "HDMI-A-5" "eDP-1"
+workspace 6 output "DP-5" "eDP-1"
+workspace 7 output "DP-5" "eDP-1"
+workspace 8 output "DP-5" "eDP-1"
+workspace 9 output "DP-5" "eDP-1"
+workspace 0 output "DP-5" "eDP-1"
 
 # focus output "HDMI-A-5"
 
