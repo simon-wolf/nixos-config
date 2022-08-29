@@ -35,25 +35,27 @@ set $menu fuzzel | xargs swaymsg exec --
 output "Unknown LC116LF3L01 0x00000000" {
   resolution 1920x1080 position 0,0
   scale 1.0
+  bg $HOME/.config/sway/wallpapers/nix_dark1.png stretch
 }
 
 # StarLite4
 output "Unknown 0x096F 0x00000000" {
   resolution 1920x1080 position 0,0
   scale 1.5
+  bg $HOME/.config/sway/wallpapers/nix_dark1.png stretch
 }
 
 # Desktop
 output "DP-5" {
   resolution 2560x1440 position 0,0
   scale 1.0
-  bg ~/Pictures/wallpapers/nix_dark1.png stretch
+  bg $HOME/.config/sway/wallpapers/nix_dark1.png stretch
 }
 
 output "HDMI-A-5" {
   resolution 2560x1440 position 2560,0
   scale 1.0
-  bg ~/Pictures/wallpapers/nix_dark1.png stretch
+  bg $HOME/.config/sway/wallpapers/nix_dark1.png stretch
 }
 
 workspace 1 output "HDMI-A-5"

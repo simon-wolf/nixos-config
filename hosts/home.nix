@@ -84,6 +84,11 @@
     executable = true;
   };
 
+  home.file.".config/sway/wallpapers" = {
+    source = ../config/sway/wallpapers;
+    recursive = true;
+  };
+
   home.file.".config/waybar" = {
     source = ../config/waybar;
     recursive = true;
