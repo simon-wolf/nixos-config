@@ -19,7 +19,7 @@
 
   hardware =
     let
-      brother = "Brother_HL-5450DL_NixOS";
+      brother = "Brother_HL-5450DN_NixOS";
       brother_ip = "192.168.10.10";
       xerox = "Xerox_Phaser_6510DN_NixOS";
       xerox_ip = "192.168.10.11";
