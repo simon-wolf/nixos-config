@@ -44,6 +44,9 @@
           }
         ];
       };
+      sane = {
+        enable = true;
+      };
     };
 
   # Run unpatched dynamic libraries

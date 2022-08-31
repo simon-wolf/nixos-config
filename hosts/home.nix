@@ -45,6 +45,7 @@
       _1password-gui
       beekeeper-studio
       # firefox             # Defined by the desktop 
+      gnome.simple-scan
       insomnia
       libreoffice
       mongodb-compass
@@ -52,7 +53,8 @@
       signal-desktop
       tdesktop              # Telegram
       teams
-      thunderbird
+      # thunderbird
+      thunderbird-102-wayland
 
       # Other
       bashmount             # Bash script for managing removable media with udisk
