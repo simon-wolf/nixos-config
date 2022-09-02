@@ -22,6 +22,7 @@
 
       shellAliases = {
         mm = "~/Development/Mindme/scripts/mm";
+        view = "evince";
       };
     };
   };

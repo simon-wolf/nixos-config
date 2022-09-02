@@ -106,7 +106,7 @@ input type:touchpad {
 }
 
 input "12951:18806:ZSA_Technology_Labs_Inc_ErgoDox_EZ_Glow" {
-  xkb_layout us(intl)
+  xkb_layout us
 }
 
 input "1452:613:Apple_Inc._Magic_Trackpad_2" {
