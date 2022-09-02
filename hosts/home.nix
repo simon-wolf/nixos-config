@@ -27,6 +27,7 @@
       nnn                   # File Manager
       ranger                # File Manager
       tree                  # Directory Listing
+      wally-cli             # Keyboard firmware flashing tool
 
       # Audio & Video
       feh                   # Image Viewer

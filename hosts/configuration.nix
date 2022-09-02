@@ -68,7 +68,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Simon Wolf";
-    extraGroups = [ "wheel" "video" "audio" "lp" "scanner"];
+    extraGroups = [ "wheel" "video" "audio" "lp" "scanner" "plugdev"];
     initialPassword = "password";
     shell = pkgs.zsh;
   };
