@@ -58,10 +58,11 @@
 
       # Other
       bashmount             # Bash script for managing removable media with udisk
+      evince                # GNOME document viewer
+      flameshot             # Screenshot tool
       fontmatrix            # Font viewer
       iwgtk                 # Graphical WiFi management tool
       udisks                # Removable drive manipulation
-      zathura               # PDF viewer
     ];
 
     stateVersion = "22.05";
