@@ -46,6 +46,7 @@
       _1password-gui
       beekeeper-studio
       # firefox             # Defined by the desktop 
+      gnome.gnome-disk-utility
       gnome.simple-scan
       insomnia
       libreoffice
@@ -62,7 +63,6 @@
       evince                # GNOME document viewer
       flameshot             # Screenshot tool
       fontmatrix            # Font viewer
-      iwgtk                 # Graphical WiFi management tool
       udisks                # Removable drive manipulation
     ];
 

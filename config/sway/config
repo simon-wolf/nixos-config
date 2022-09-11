@@ -70,7 +70,7 @@ workspace 8 output "HDMI-A-5" "eDP-1"
 workspace 9 output "HDMI-A-5" "eDP-1"
 workspace 0 output "HDMI-A-5" "eDP-1"
 
-# focus output "HDMI-A-5"
+focus output "HDMI-A-5" "eDP-1"
 
 
 #
@@ -103,10 +103,6 @@ input type:touchpad {
   tap enabled
   tap_button_map lrm
   dwt enabled
-}
-
-input "12951:18806:ZSA_Technology_Labs_Inc_ErgoDox_EZ_Glow" {
-  xkb_layout us
 }
 
 input "1452:613:Apple_Inc._Magic_Trackpad_2" {
