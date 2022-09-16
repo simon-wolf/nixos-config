@@ -2,12 +2,25 @@
 # General Home-Manager configuration
 #
 
-{ config, libs, pkgs, user, ... }:
+{ config, fetchurl, libs, pkgs, user, ... }:
 
 {
   imports = 
     (import ../modules/editors) ++
     (import ../modules/shell);
+
+#    nixpkgs.overlays = [
+#      (self: super: {
+#        insomnia = super.insomnia.overrideAttrs (old: {
+#          version = "2022.5.1";
+#          src = fetchurl {
+#            url =
+#          "https://github.com/Kong/insomnia/releases/download/core%40${self.version}/Insomnia.Core-${self.version}.deb";
+#            sha256 = "sha256-ExdfXfpimM6E/S6xiLTHdq3f4/ydtyfZ2+9o32z87gc=";
+#          };
+#        });
+#      } )
+#    ];
 
   home = {
     username = "${user}";
@@ -44,18 +57,17 @@
 
       # General Applications
       _1password-gui
+      atom                  # Text editor
       beekeeper-studio
       # firefox             # Defined by the desktop 
       gnome.gnome-disk-utility
       gnome.simple-scan
-      insomnia
       libreoffice
       mongodb-compass
       ngrok
       signal-desktop
       tdesktop              # Telegram
       teams
-      # thunderbird
       thunderbird-102-wayland
 
       # Other
