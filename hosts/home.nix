@@ -66,6 +66,7 @@
       mongodb-compass
       ngrok
       signal-desktop
+      slack
       tdesktop              # Telegram
       teams
       thunderbird-102-wayland
