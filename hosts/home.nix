@@ -74,7 +74,6 @@
       # Other
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
-      flameshot             # Screenshot tool
       fontmatrix            # Font viewer
       udisks                # Removable drive manipulation
     ];
