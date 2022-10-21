@@ -62,7 +62,7 @@
       # firefox             # Defined by the desktop 
       gnome.gnome-disk-utility
       gnome.simple-scan
-      libreoffice
+      libreoffice-fresh
       mongodb-compass
       ngrok
       signal-desktop

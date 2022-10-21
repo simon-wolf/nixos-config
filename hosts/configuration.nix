@@ -109,6 +109,8 @@
       source-serif-pro
       noto-fonts-emoji
       roboto
+      merriweather
+      montserrat
     ];
 
     fontconfig = {
