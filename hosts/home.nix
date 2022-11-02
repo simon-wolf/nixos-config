@@ -39,6 +39,7 @@
       programmer-calculator # Calculator
       nnn                   # File Manager
       ranger                # File Manager
+      rsync                 # Backup tool
       tree                  # Directory Listing
       wally-cli             # Keyboard firmware flashing tool
 
