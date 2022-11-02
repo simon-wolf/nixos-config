@@ -31,6 +31,7 @@
       alacritty             # Terminal emulator
       bc                    # Calculator
       btop                  # Resource manager
+      cron                  # Command scheduler
       git                   # Git
       jq                    # JSON parser
       lazygit               # Git client
