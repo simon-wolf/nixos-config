@@ -63,7 +63,6 @@
       beekeeper-studio
       chromium
       # firefox             # Defined by the desktop 
-      google-chrome
       gnome.gnome-disk-utility
       gnome.simple-scan
       libreoffice-fresh
