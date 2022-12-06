@@ -67,6 +67,8 @@
       gnome.simple-scan
       libreoffice-fresh
       mongodb-compass
+      maestral
+      maestral-gui
       ngrok
       signal-desktop
       slack
@@ -78,6 +80,7 @@
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
       fontmatrix            # Font viewer
+      gnome.gnome-keyring
       udisks                # Removable drive manipulation
     ];
 
