@@ -83,9 +83,9 @@
     recursive = true;
   };
 
-  home.file.".config/pgcli/config" = {
-    source = ../config/pgcli/config;
-    recursive = false;
+  home.file.".config/pgcli" = {
+    source = ../config/pgcli;
+    recursive = true;
   };
 
   home.file.".config/sway/config" = {
