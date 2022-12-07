@@ -9,19 +9,6 @@
     (import ../modules/editors) ++
     (import ../modules/shell);
 
-#    nixpkgs.overlays = [
-#      (self: super: {
-#        insomnia = super.insomnia.overrideAttrs (old: {
-#          version = "2022.5.1";
-#          src = fetchurl {
-#            url =
-#          "https://github.com/Kong/insomnia/releases/download/core%40${self.version}/Insomnia.Core-${self.version}.deb";
-#            sha256 = "sha256-ExdfXfpimM6E/S6xiLTHdq3f4/ydtyfZ2+9o32z87gc=";
-#          };
-#        });
-#      } )
-#    ];
-
   home = {
     username = "${user}";
     homeDirectory = "/home/${user}";
@@ -94,6 +81,11 @@
   home.file.".config/alacritty" = {
     source = ../config/alacritty;
     recursive = true;
+  };
+
+  home.file.".config/pgcli/config" = {
+    source = ../config/pgcli/config;
+    recursive = false;
   };
 
   home.file.".config/sway/config" = {
