@@ -51,6 +51,7 @@
       chromium
       # firefox             # Defined by the desktop 
       gnome.gnome-disk-utility
+      gnome-obfuscate       # Censor private information in images
       gnome.simple-scan
       libreoffice-fresh
       mongodb-compass
