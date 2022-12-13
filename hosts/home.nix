@@ -62,12 +62,12 @@
       slack
       tdesktop              # Telegram
       teams
-      thunderbird-102-wayland
+      # thunderbird-102-wayland
+      thunderbird
 
       # Other
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
-      fontmatrix            # Font viewer
       gnome.gnome-keyring
       udisks                # Removable drive manipulation
     ];
