@@ -17,7 +17,8 @@
         vim-git
         vim-json
         vim-nix
-	vim-markdown
+        vim-markdown
+        lazygit-nvim
       ];
       
       extraConfig = ''
