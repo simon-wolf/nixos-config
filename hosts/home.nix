@@ -24,6 +24,7 @@
       lazygit               # Git client
       maim                  # Screenshot utility
       pfetch                # Minimal Fetch
+      pgcli                 # Command-line interface for PostgreSQL
       programmer-calculator # Calculator
       nnn                   # File Manager
       ranger                # File Manager
