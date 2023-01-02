@@ -17,6 +17,12 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  networking.extraHosts = ''
+    127.0.0.1 mindme.local
+    127.0.0.1 beta.mindme.local
+    127.0.0.1 user.mindme.local
+  '';
+
   hardware =
     let
       brother = "Brother_HL-5450DN_NixOS";
