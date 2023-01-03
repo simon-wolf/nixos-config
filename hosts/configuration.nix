@@ -22,8 +22,10 @@
     127.0.0.1 beta.mindme.local
     127.0.0.1 user.mindme.local
     127.0.0.1 sms.mindme.local
+    127.0.0.1 webhooks.mindme.local
     127.0.0.1 staging.mindme.local
     127.0.0.1 stagingsms.mindme.local
+    127.0.0.1 stagingwebhooks.mindme.local
   '';
 
   hardware =
