@@ -21,6 +21,9 @@
     127.0.0.1 mindme.local
     127.0.0.1 beta.mindme.local
     127.0.0.1 user.mindme.local
+    127.0.0.1 sms.mindme.local
+    127.0.0.1 staging.mindme.local
+    127.0.0.1 stagingsms.mindme.local
   '';
 
   hardware =
