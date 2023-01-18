@@ -65,6 +65,7 @@
       teams
       # thunderbird-102-wayland
       thunderbird
+      virt-manager
 
       # Other
       bashmount             # Bash script for managing removable media with udisk

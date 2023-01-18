@@ -82,7 +82,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Simon Wolf";
-    extraGroups = [ "wheel" "video" "audio" "lp" "scanner" "plugdev"];
+    extraGroups = [ "wheel" "video" "audio" "lp" "scanner" "plugdev" "libvirtd"];
     initialPassword = "password";
     shell = pkgs.zsh;
   };
@@ -138,6 +138,10 @@
       };
     };
   };
+
+  # Virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
 
   nix = {
     settings = {
