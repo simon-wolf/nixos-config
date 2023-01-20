@@ -56,16 +56,14 @@
       gnome.simple-scan
       libreoffice-fresh
       mongodb-compass
-      maestral
+      maestral              # Dropbox
       maestral-gui
       ngrok
       signal-desktop
       slack
       tdesktop              # Telegram
       teams
-      # thunderbird-102-wayland
       thunderbird
-      virt-manager
 
       # Other
       bashmount             # Bash script for managing removable media with udisk

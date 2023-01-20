@@ -139,10 +139,6 @@
     };
   };
 
-  # Virt-manager
-  virtualisation.libvirtd.enable = true;
-  programs.dconf.enable = true;
-
   nix = {
     settings = {
       auto-optimise-store = true;
