@@ -48,6 +48,54 @@ nix flake update
 sudo nixos-rebuild switch --flake .#simon-lite2
 ```
 
+## WiFi Config
+
+### Enable WiFi
+
+To list network devices:
+
+`nmcli dev status`
+
+To just see if wifi is enabled:
+
+`nmcli radio wifi`
+
+If wifi is disabled it can be enabled with:
+
+`nmcli radio wifi on`
+
+### List Wifi Networks
+
+`nmcli dev wifi list`
+
+### Connect to Wifi
+
+`sudo nmcli dev wifi connect [network-ssid]`
+
+You will be prompted for the password or you can enter it at the same time via:
+
+`sudo nmcli dev wifi connect [network-ssid] password [network-password]`
+
+Or if you want to be prompted for the password:
+
+`sudo nmcli --ask dev wifi connect [network-ssid]`
+
+### Check Configured Networks
+
+You can view the configured networks via:
+
+`nmcli con show`
+
+### Connecting and Disconnecting
+
+To disconnect from a network:
+
+`nmclt con down [ssid]`
+
+To connect to a network:
+
+`nmcli con up [ssid]`
+
 ## Nix-Shell
 
 ...
