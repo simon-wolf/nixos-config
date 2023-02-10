@@ -85,6 +85,11 @@
     recursive = true;
   };
 
+  home.file.".config/nnn/plugins" = {
+    source = ../config/nnn/plugins;
+    recursive = true;
+  };
+
   home.file.".config/pgcli" = {
     source = ../config/pgcli;
     recursive = true;
