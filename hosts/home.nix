@@ -85,8 +85,8 @@
     recursive = true;
   };
 
-  home.file.".config/nnn/plugins" = {
-    source = ../config/nnn/plugins;
+  home.file.".config/nnn" = {
+    source = ../config/nnn;
     recursive = true;
   };
 
