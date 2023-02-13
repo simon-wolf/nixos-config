@@ -77,6 +77,9 @@
     pulse.enable = true;
   };
 
+  # udisks2 service
+  services.udisks2.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.mutableUsers = true;
   users.users.${user} = {
