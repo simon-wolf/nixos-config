@@ -61,9 +61,9 @@
       maestral-gui
       ngrok
       signal-desktop
-      slack
+      # slack
       tdesktop              # Telegram
-      teams
+      # teams
       thunderbird
 
       # Other
