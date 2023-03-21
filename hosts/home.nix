@@ -45,6 +45,7 @@
       rsync                 # Syncer $ rsync -r dir1/ dir2/
       unzip                 # Zip Files
       unrar                 # Rar Files
+      zip
 
       # General Applications
       _1password-gui
