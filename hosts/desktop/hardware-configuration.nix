@@ -34,7 +34,7 @@
   networking = {
     useDHCP = lib.mkDefault true;
     hostName = "desktop";
-    networknamager.enable = true;
+    networkmanager.enable = true;
   };
   # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
