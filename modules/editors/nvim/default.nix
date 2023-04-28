@@ -29,9 +29,14 @@
         set nofoldenable
 
         " Vim Wiki
-        let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown'}]
+        let g:vimwiki_list = [
+        \   {'path': '~/notes/', 'syntax': 'markdown'},
+        \   {'path': '~/Development/Mindme/sw_notes/', 'syntax': 'markdown', 'ext': '.md'}
+        \ ]
+        let g:vimwiki_global_ext = 0
         au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab
       '';
     };
   };
 }
+
