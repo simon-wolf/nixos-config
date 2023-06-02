@@ -22,14 +22,14 @@
         # nnn
         # export NNN_PLUG="p:evince"
         # export NNN_FCOLORS='0000E6310000000000000000'
-        alias nnn "nnn -e"
-        alias ll "nnn -de"
         export NNN_FIFO="/tmp/nnn.fifo"
       '';
 
       shellAliases = {
         mm = "~/Development/Mindme/scripts/mm";
         view = "evince";
+        nnn = "nnn -e";
+        ll = "nnn -de";
       };
     };
   };
