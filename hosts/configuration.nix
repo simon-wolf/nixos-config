@@ -66,6 +66,9 @@
   # Run unpatched dynamic libraries
   programs.nix-ld.enable = true;
 
+  # ZSH
+  programs.zsh.enable = true;
+
   # Enable sound.
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
