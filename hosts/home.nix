@@ -79,6 +79,16 @@
 
   programs = {
     home-manager.enable = true;
+    tmux = {
+      enable = true;
+      shortcut = "a";
+      baseIndex = 1;
+      clock24 = true;
+      keyMode = "vi";
+      escapeTime = 1;
+      terminal = "screen-256color";
+      extraConfig = "bind v split-window -h\nbind b split-window -v";
+    };
   };
 
   home.file.".config/alacritty" = {
