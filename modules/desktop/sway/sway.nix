@@ -68,9 +68,6 @@ in
         dracula-theme			# gtk theme
         gnome3.adwaita-icon-theme	# default gnome cursors
 
-        # Applications
-        firefox-wayland
-
         # Helper utilities
         wl-clipboard			# Command line clipboard for Wayland
         mako				# Lightweight Wayland notifications daemon

@@ -52,7 +52,7 @@
       atom                  # Text editor
       beekeeper-studio
       chromium
-      # firefox             # Defined by the desktop 
+      firefox 
       gnome.gnome-disk-utility
       gnome-obfuscate       # Censor private information in images
       gnome.simple-scan
