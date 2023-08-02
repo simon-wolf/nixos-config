@@ -7,13 +7,20 @@
 let
   vscode_extensions = (with pkgs.vscode-extensions; [
     bradlc.vscode-tailwindcss
-    jakebecker.elixir-ls
+#    elixir-lsp.vscode-elixir-ls
     ms-python.python
     ms-python.vscode-pylance
     phoenixframework.phoenix
     stkb.rewrap
     tomoki1207.pdf
   ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    {
+      name = "elixir-ls";
+      publisher = "JakeBecker";
+      version = "0.15.3";
+#      sha256 = "0000000000000000000000000000000000000000000000000000";
+      sha256 = "sha256-EPdzp2mpOkBcqC1V8kcm4nXjZkR1QcBGIIettkJ2tf0=";
+    }
     {
       name = "vscode-elixir-credo";
       publisher = "pantajoe";
