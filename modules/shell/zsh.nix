@@ -23,6 +23,7 @@
         # export NNN_PLUG="p:evince"
         # export NNN_FCOLORS='0000E6310000000000000000'
         export NNN_FIFO="/tmp/nnn.fifo"
+        export NNN_BMS="M:$HOME/Dropbox_mm/Marketing\ and\ Media/Devices;D:$HOME/Development/Mindme/v3_platform"
       '';
 
       shellAliases = {
