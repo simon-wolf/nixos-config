@@ -49,13 +49,13 @@
 
       # General Applications
       _1password-gui
-      atom                  # Text editor
       beekeeper-studio
       chromium
       firefox 
       gnome.gnome-disk-utility
       gnome-obfuscate       # Censor private information in images
       gnome.simple-scan
+      gnome-text-editor
       libreoffice-fresh
       mongodb-compass
       maestral              # Dropbox
