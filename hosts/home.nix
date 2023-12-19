@@ -61,6 +61,7 @@
       maestral              # Dropbox
       maestral-gui
       ngrok
+      obsidian
       signal-desktop
       slack
       tdesktop              # Telegram
