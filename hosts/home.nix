@@ -35,7 +35,10 @@
       youtube-dl            # YouTube downloader
 
       # Audio & Video
+      abcde                 # CD Ripper
+      cdparanoia            # Reads digital audio from CDs (for abcde)
       feh                   # Image Viewer
+      flac                  # FLAC audio format library and tools (for abcde)
       mpv                   # Media Player
       pavucontrol           # Audio Control
       vlc                   # Media Player
