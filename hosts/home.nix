@@ -95,6 +95,11 @@
     };
   };
 
+  home.file.".abcde.conf" = {
+    source = ../config/abcde/abcde_lossless_flac.conf;
+    recursive = false;
+  };
+
   home.file.".config/alacritty" = {
     source = ../config/alacritty;
     recursive = true;
