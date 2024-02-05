@@ -1,5 +1,5 @@
 #
-# Home-manager config for starlite2
+# Home-manager config for starlite4
 #
 
 { pkgs, ... }:

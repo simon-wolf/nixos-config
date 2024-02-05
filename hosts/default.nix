@@ -22,24 +22,6 @@ let
   lib = nixpkgs.lib;
 in
 {
-  starlite2 = lib.nixosSystem {
-    inherit system;
-    specialArgs = { inherit inputs user location; };
-    modules = [
-      ./starlite2
-      ./configuration.nix
-
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit user; };
-	home-manager.users.${user} = {
-          imports = [(./home.nix)] ++ [(import ./starlite2/home.nix)];
-        };
-      }
-    ];
-  };
-
   starlite4 = lib.nixosSystem {
     inherit system;
     specialArgs = { inherit inputs user location; };
