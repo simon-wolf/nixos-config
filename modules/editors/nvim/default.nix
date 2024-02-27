@@ -13,13 +13,14 @@
 
       plugins = with pkgs.vimPlugins; [
         # Syntax
+        lazygit-nvim
+        nerdtree
+        nerdtree-git-plugin
         vim-elixir
         vim-git
         vim-json
-        vim-nix
         vim-markdown
-        vimwiki
-        lazygit-nvim
+        vim-nix
       ];
       
       extraConfig = ''
@@ -29,6 +30,10 @@
         set nofoldenable
         set spelllang=en_gb
         set spell
+
+        let NERDTreeMinimalUI=1
+
+        cabbrev tree NERDTree
       '';
     };
   };
