@@ -19,6 +19,7 @@
       bc                    # Calculator
       btop                  # Resource manager
       cron                  # Command scheduler
+      fzf                   # Fuzzy find
       git                   # Git
       jq                    # JSON parser
       lazygit               # Git client

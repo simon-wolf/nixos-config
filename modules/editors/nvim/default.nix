@@ -12,7 +12,7 @@
       vimAlias = true;
 
       plugins = with pkgs.vimPlugins; [
-        # Syntax
+        fzfWrapper
         lazygit-nvim
         nerdtree
         nerdtree-git-plugin
