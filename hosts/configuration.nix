@@ -98,6 +98,9 @@
   # udisks2 service
   services.udisks2.enable = true;
 
+  # Gnome keyring
+  services.gnome.gnome-keyring.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.mutableUsers = true;
   users.users.${user} = {

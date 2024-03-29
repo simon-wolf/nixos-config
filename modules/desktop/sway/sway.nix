@@ -76,6 +76,10 @@ in
         slurp				# Select area in a Wayland compositor (used for screenshots with grim)
         fuzzel				# Application launcher
       ];
+      extraSessionCommands = ''
+        eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh);
+        export SSH_AUTH_SOCK;
+      '';
     };
   };
 
