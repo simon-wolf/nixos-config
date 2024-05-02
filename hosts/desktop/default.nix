@@ -25,6 +25,24 @@
     #dconf.enable = true;
     light.enable = true;
   };
+  
+  fileSystems."/mnt/pi-nas/shared" = {
+    device = "//192.168.10.2/shared";
+    fsType = "cifs";
+    options = let
+      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+	
+      in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
+  };
+
+  fileSystems."/mnt/pi-nas/media" = {
+    device = "//192.168.10.2/media";
+    fsType = "cifs";
+    options = let
+      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+	
+      in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
+  };
 
   # Udev rules for ZSA/Wally to flash Ergodox keyboard
   # https://github.com/zsa/wally/wiki/Linux-install
