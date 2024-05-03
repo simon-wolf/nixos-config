@@ -66,6 +66,7 @@
       maestral-gui
       ngrok
       obsidian
+      pdfarranger
       signal-desktop
       slack
       tdesktop              # Telegram
