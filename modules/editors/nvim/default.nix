@@ -35,7 +35,8 @@
 	    javascript
 	    jq
 	    json
-	    markdown
+            latex
+            markdown
 	    markdown_inline
 	    nix
 	    python
