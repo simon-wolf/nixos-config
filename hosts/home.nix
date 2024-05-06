@@ -73,11 +73,14 @@
       # teams
       thunderbird
 
+      # LaTeX
+      texlive.combined.scheme-full
+      texstudio
+
       # Other
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
       gnome.gnome-keyring
-      texlive.combined.scheme-full
       udisks                # Removable drive manipulation
     ];
 
