@@ -9,7 +9,8 @@
     zsh = {
       enable = true;
       dotDir = ".config/zsh_nix";
-      enableAutosuggestions = true;
+      # enableAutosuggestions = true;
+      autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       history.size = 10000;                 # Maximum events in internal history
       history.save = 10000;                 # Maximum events in history file
