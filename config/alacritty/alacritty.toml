@@ -1,0 +1,49 @@
+import = ["/home/simon/.config/alacritty/dracula.toml"]
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Inconsolata"
+style = "Bold"
+
+[font.bold_italic]
+family = "Inconsolata"
+style = "Bold Italic"
+
+[font.italic]
+family = "Inconsolata"
+style = "Italic"
+
+[font.normal]
+family = "Inconsolata"
+style = "Regular"
+
+[scrolling]
+history = 10000
+
+[window]
+decorations = "none"
+dynamic_title = true
+opacity = 0.9
+startup_mode = "Maximized"
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 2
+y = 2
+
+[window.position]
+x = 0
+y = 0
