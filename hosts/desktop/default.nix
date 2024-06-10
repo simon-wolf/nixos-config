@@ -21,9 +21,12 @@
     keyMap = "us";
   };
 
+  virtualisation.libvirtd.enable = true;
+
   programs = {
     #dconf.enable = true;
     light.enable = true;
+    virt-manager.enable = true;
   };
   
   fileSystems."/mnt/pi-nas/shared" = {
