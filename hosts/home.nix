@@ -33,7 +33,6 @@
       rsync                 # Backup tool
       tree                  # Directory Listing
       wally-cli             # Keyboard firmware flashing tool
-      youtube-dl            # YouTube downloader
 
       # Audio & Video
       abcde                 # CD Ripper
