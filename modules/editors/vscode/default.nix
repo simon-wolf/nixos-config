@@ -12,6 +12,7 @@ let
     ms-python.vscode-pylance
     phoenixframework.phoenix
     stkb.rewrap
+    streetsidesoftware.code-spell-checker
     tomoki1207.pdf
   ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
