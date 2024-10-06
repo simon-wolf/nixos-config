@@ -49,7 +49,6 @@
       extraConfig = ''
         syntax enable					" Syntax highlighting
         highlight Comment cterm=italic gui=italic	" Comments are italic
-        set number					" Show line numbers
         set nofoldenable
         set spelllang=en_gb
         set nospell
@@ -57,6 +56,10 @@
         let NERDTreeMinimalUI=1
 
         cabbrev tree NERDTree
+      '';
+
+      extraLuaConfig = ''
+        vim.opt.number = true
       '';
     };
   };
