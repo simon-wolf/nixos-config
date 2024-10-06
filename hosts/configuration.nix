@@ -17,19 +17,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  networking.extraHosts = ''
-    127.0.0.1 mindme.local
-    127.0.0.1 www.mindme.local
-    127.0.0.1 beta.mindme.local
-    127.0.0.1 user.mindme.local
-    127.0.0.1 units.mindme.local
-    127.0.0.1 sms.mindme.local
-    127.0.0.1 webhooks.mindme.local
-    127.0.0.1 staging.mindme.local
-    127.0.0.1 stgunits.mindme.local
-    127.0.0.1 stagingsms.mindme.local
-    127.0.0.1 stagingwebhooks.mindme.local
-  '';
+#  networking.extraHosts = ''
+#    127.0.0.1 mindme.local
+#  '';
 
   hardware =
     let
