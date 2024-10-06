@@ -34,6 +34,19 @@
       tree                  # Directory Listing
       wally-cli             # Keyboard firmware flashing tool
 
+      # Email
+      neomutt               # Email
+      isync                 # Mail download and local sync (mbsync)
+      msmtp                 # Send outgoing email via SMTP
+      pass                  # To encrypt credentials
+      pam_gnupg             # PAM module to hand login password to gpg-agent
+      lynx                  # Command-line browser to view HTML emails
+      abook                 # Command-line address book
+      notmuch-mutt          # Index and search mail
+      gnupg                 # Crypto
+      gpg-tui               # Terminal interface for GnuPG
+      pinentry-curses       # GnuPG's interface to passphrase input
+
       # Audio & Video
       abcde                 # CD Ripper
       cdparanoia            # Reads digital audio from CDs (for abcde)
@@ -98,7 +111,98 @@
       terminal = "screen-256color";
       extraConfig = "bind v split-window -h\nbind b split-window -v";
     };
+    neomutt = {
+      enable = true;
+      vimKeys = false;
+      sidebar = {
+        enable = true;
+	format = "%B%?F? [%F]?%* %?N?%N/?%S";
+	shortPath = true;
+      };
+      sort = "reverse-date-received";
+      extraConfig = ''
+	# cache settings
+	set header_cache = "~/mail/fastmail/cache/headers"
+	set message_cachedir = "~/mail/fastmail/cache/bodies"
+        
+	# navigation settings
+
+	# synchronisation settings
+	macro index S "<shell-escape>mbsync -V fastmail<enter>" "sync email"
+
+	# misc settings
+        set mail_check_stats
+
+	# default index colour settings
+	color index yellow default ".*"
+	color index_author red default ".*"
+        color index_number blue default ".*"
+        color index_subject cyan default ".*"
+
+        # new mail colour settings
+        color index brightyellow black "~N"
+        color index_author brightred black "~N"
+        color index_subject brightcyan black "~N"
+      '';
+    };
   };
+
+  accounts = {
+    email = {
+      maildirBasePath = "mail";
+      accounts.fastmail = {
+        primary = true;
+	realName = "Simon Wolf";
+	flavor = "fastmail.com";
+        userName = "swolf@fastmail.co.uk";
+        passwordCommand = "pass Personal/Fastmail";
+        address = "swolf@fastmail.co.uk";
+	maildir = {
+	  path = "fastmail";
+	};
+	folders = {
+          inbox = "INBOX";
+	  drafts = "Drafts";
+	  sent = "Sent Items";
+	  trash = "Trash";
+	};
+	msmtp = {
+	  enable = true;
+	};
+	neomutt = {
+          enable = true;
+	  sendMailCommand = "msmtp -a fastmail";
+	};
+      };
+    };
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
+    enableScDaemon = false;
+  };
+  programs.gpg.enable = true;
+
+#  systemd.timers = "mbsync-mail-refresh" = {
+#    wantedBy = [ "timers.target" ];
+#    timerConfig = {
+#      OnBootSec = "1m";
+#      OnUnitActiveSec = "5m";
+#      Unit = "mbsync.service";
+#    };
+#  };
+
+#  systemd.services."mbsync-mail-refresh" = {
+#    script = ''
+#      set -eu
+#      ${pkgs.coreutils}/bin/mbsync "fastmail"
+#    '';
+#    serviceConfig = {
+#      Type = "oneshot";
+#      User = "simon";
+#    };
+#  };
 
   home.file.".abcde.conf" = {
     source = ../config/abcde/abcde_lossless_flac.conf;
@@ -110,6 +214,15 @@
     recursive = true;
   };
 
+  home.file.".mbsyncrc" = {
+    source = ../config/neomutt/mbsync.conf;
+    recursive = false;
+  };
+  home.file.".notmuch-config" = {
+    source = ../config/neomutt/notmuch.conf;
+    recursive = false;
+  };
+  
   home.file.".config/nnn" = {
     source = ../config/nnn;
     recursive = true;

@@ -17,10 +17,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-#  networking.extraHosts = ''
-#    127.0.0.1 mindme.local
-#  '';
-
   hardware =
     let
       brother = "Brother_HL-5450DN_NixOS";
@@ -75,8 +71,6 @@
   };
 
   # Enable sound.
-  # sound.enable = true;
-  # hardware.pulseaudio.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
