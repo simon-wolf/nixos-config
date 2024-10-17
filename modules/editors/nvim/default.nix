@@ -56,6 +56,8 @@
         let NERDTreeMinimalUI=1
 
         cabbrev tree NERDTree
+
+        set clipboard+=unnamedplus
       '';
 
       extraLuaConfig = ''
