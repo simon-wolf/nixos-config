@@ -102,71 +102,7 @@
 
   programs = {
     home-manager.enable = true;
-    neomutt = {
-      enable = true;
-      vimKeys = false;
-      sidebar = {
-        enable = true;
-	format = "%B%?F? [%F]?%* %?N?%N/?%S";
-	shortPath = true;
-      };
-      sort = "reverse-date-received";
-      extraConfig = ''
-	# cache settings
-	set header_cache = "~/mail/fastmail/cache/headers"
-	set message_cachedir = "~/mail/fastmail/cache/bodies"
-        
-	# navigation settings
-
-	# synchronisation settings
-	macro index S "<shell-escape>mbsync -V fastmail<enter>" "sync email"
-
-	# misc settings
-        set mail_check_stats
-
-	# default index colour settings
-	color index yellow default ".*"
-	color index_author red default ".*"
-        color index_number blue default ".*"
-        color index_subject cyan default ".*"
-
-        # new mail colour settings
-        color index brightyellow black "~N"
-        color index_author brightred black "~N"
-        color index_subject brightcyan black "~N"
-      '';
-    };
   };
-
-#  accounts = {
-#    email = {
-#      maildirBasePath = "mail";
-#      accounts.fastmail = {
-#        primary = true;
-#	realName = "Simon Wolf";
-#	flavor = "fastmail.com";
-#        userName = "swolf@fastmail.co.uk";
-#        passwordCommand = "pass Personal/Fastmail";
-#        address = "swolf@fastmail.co.uk";
-#	maildir = {
-#	  path = "fastmail";
-#	};
-#	folders = {
-#          inbox = "INBOX";
-#	  drafts = "Drafts";
-#	  sent = "Sent Items";
-#	  trash = "Trash";
-#	};
-#	msmtp = {
-#	  enable = true;
-#	};
-#	neomutt = {
-#          enable = true;
-#	  sendMailCommand = "msmtp -a fastmail";
-#	};
-#      };
-#    };
-#  };
 
   services.gpg-agent = {
     enable = true;

@@ -3,5 +3,6 @@
 #
 
 [
-  ./accouts.nix
+  ./accounts.nix
+  ./neomutt.nix
 ]
