@@ -7,6 +7,7 @@
 {
   imports = 
     (import ../modules/editors) ++
+    (import ../modules/email) ++
     (import ../modules/shell);
 
   home = {
@@ -101,25 +102,6 @@
 
   programs = {
     home-manager.enable = true;
-#    tmux = {
-#      enable = true;
-#      shortcut = "a";
-#      baseIndex = 1;
-#      clock24 = true;
-#      keyMode = "vi";
-#      escapeTime = 1;
-#      terminal = "screen-256color";
-#      extraConfig = ''
-#        # Use v and b to split vertically and horizontally (matching Sway)
-#        unbind v
-#	unbind b
-#        unbind % # Split vertically
-#	unbind '"' # Split horizontally
-#
-#	bind v split-window -v -c "#{pane_current_path}"
-#	bind b split-window -h -c "#{pane_current_path}"
-#      '';
-#    };
     neomutt = {
       enable = true;
       vimKeys = false;
@@ -156,35 +138,35 @@
     };
   };
 
-  accounts = {
-    email = {
-      maildirBasePath = "mail";
-      accounts.fastmail = {
-        primary = true;
-	realName = "Simon Wolf";
-	flavor = "fastmail.com";
-        userName = "swolf@fastmail.co.uk";
-        passwordCommand = "pass Personal/Fastmail";
-        address = "swolf@fastmail.co.uk";
-	maildir = {
-	  path = "fastmail";
-	};
-	folders = {
-          inbox = "INBOX";
-	  drafts = "Drafts";
-	  sent = "Sent Items";
-	  trash = "Trash";
-	};
-	msmtp = {
-	  enable = true;
-	};
-	neomutt = {
-          enable = true;
-	  sendMailCommand = "msmtp -a fastmail";
-	};
-      };
-    };
-  };
+#  accounts = {
+#    email = {
+#      maildirBasePath = "mail";
+#      accounts.fastmail = {
+#        primary = true;
+#	realName = "Simon Wolf";
+#	flavor = "fastmail.com";
+#        userName = "swolf@fastmail.co.uk";
+#        passwordCommand = "pass Personal/Fastmail";
+#        address = "swolf@fastmail.co.uk";
+#	maildir = {
+#	  path = "fastmail";
+#	};
+#	folders = {
+#          inbox = "INBOX";
+#	  drafts = "Drafts";
+#	  sent = "Sent Items";
+#	  trash = "Trash";
+#	};
+#	msmtp = {
+#	  enable = true;
+#	};
+#	neomutt = {
+#          enable = true;
+#	  sendMailCommand = "msmtp -a fastmail";
+#	};
+#      };
+#    };
+#  };
 
   services.gpg-agent = {
     enable = true;
