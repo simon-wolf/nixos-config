@@ -28,9 +28,10 @@
         {
           plugin = dracula;
 	  extraConfig = ''
-            set -g @dracula-show-battery false
 	    set -g @dracula-show-powerline true
 	    set -g @dracula-refresh-rate 10
+	    set -g @dracula-plugins "git ssh-session"
+	    set -g @dracula-show-left-icon session
 	  '';
 	}
       ];
