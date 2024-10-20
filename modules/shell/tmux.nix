@@ -2,6 +2,8 @@
 # tmux
 #
 
+{ pkgs, ...}:
+
 {
   programs = {
     tmux = {
@@ -22,6 +24,16 @@
 	bind v split-window -v -c "#{pane_current_path}"
 	bind b split-window -h -c "#{pane_current_path}"
       '';
+      plugins = with pkgs.tmuxPlugins; [
+        {
+          plugin = dracula;
+	  extraConfig = ''
+            set -g @dracula-show-battery false
+	    set -g @dracula-show-powerline true
+	    set -g @dracula-refresh-rate 10
+	  '';
+	}
+      ];
     };
   };
 }
