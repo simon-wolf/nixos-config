@@ -26,7 +26,7 @@
     in
     {
       printers = {
-        ensureDefaultPrinter = brother;
+        # ensureDefaultPrinter = brother;
         ensurePrinters = [
           {
             name = brother;
