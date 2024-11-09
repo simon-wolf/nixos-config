@@ -32,6 +32,7 @@
       ranger                # File Manager
       restic                # Backup tool
       rsync                 # Backup tool
+      toot                  # Mastodon client
       tree                  # Directory Listing
       wally-cli             # Keyboard firmware flashing tool
 
