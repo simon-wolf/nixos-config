@@ -38,9 +38,11 @@
             latex
             markdown
 	    markdown_inline
-	    nix
+            minimap-vim
+            nix
 	    python
 	    ssh_config
+	    vim-gitgutter
 	    xml
 	  ]
 	))
@@ -58,6 +60,21 @@
         cabbrev tree NERDTree
 
         set clipboard+=unnamedplus
+
+	let g:minimap_width = 10
+        let g:minimap_auto_start = 1
+        let g:minimap_auto_start_win_enter = 1
+	let g:minimap_git_colors = 1
+
+	" Git Gutter
+	highlight GitGutterAdd guifg=#009900 ctermfg=Green
+	highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
+	highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
+	nmap ) <Plug>(GitGutterNextHunk)
+	nmap ( <Plug>(GitHuggerPrevHunk)
+	let g:gitgutter_enabled = 1
+	let gitgutter_map_keys = 0
+	" let g:airline_theme = 'codedark'
       '';
 
       extraLuaConfig = ''
