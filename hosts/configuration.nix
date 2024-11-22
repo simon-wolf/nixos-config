@@ -133,6 +133,7 @@
       roboto
       merriweather
       montserrat
+      open-sans
     ];
 
     fontconfig = {
