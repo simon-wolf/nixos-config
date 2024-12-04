@@ -59,7 +59,7 @@
       vlc                   # Media Player
 
       # File Management
-      gnome.file-roller     # Archive Manager
+      file-roller     # Archive Manager
       pcmanfm               # File Manager
       unzip                 # Zip Files
       unrar                 # Rar Files
@@ -70,9 +70,9 @@
       beekeeper-studio
       chromium
       firefox 
-      gnome.gnome-disk-utility
+      gnome-disk-utility
       gnome-obfuscate       # Censor private information in images
-      gnome.simple-scan
+      simple-scan
       gnome-text-editor
       libreoffice-fresh
       mongodb-compass
@@ -94,7 +94,7 @@
       # Other
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
-      gnome.gnome-keyring
+      gnome-keyring
       udisks                # Removable drive manipulation
     ];
 
