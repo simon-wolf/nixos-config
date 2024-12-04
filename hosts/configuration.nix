@@ -126,6 +126,7 @@
           "RobotoMono"
         ];
       })
+      b612
       source-code-pro
       source-sans-pro
       source-serif-pro
@@ -134,6 +135,7 @@
       merriweather
       montserrat
       open-sans
+      # notonoto
     ];
 
     fontconfig = {
