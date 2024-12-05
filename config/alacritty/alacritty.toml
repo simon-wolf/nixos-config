@@ -1,4 +1,4 @@
-import = ["/home/simon/.config/alacritty/dracula.toml"]
+general.import = ["/home/simon/.config/alacritty/dracula.toml"]
 
 [env]
 TERM = "xterm-256color"
