@@ -14,7 +14,7 @@
     let
       system = "x86_64-linux";
       user = "simon";
-      location = "$HOME/.nixos-setup";
+      location = "$HOME/.nixos-config";
     in {
       nixosConfigurations = (
         import ./hosts {				# Imports ./hosts/default.nix
