@@ -130,12 +130,15 @@
       source-code-pro
       source-sans-pro
       source-serif-pro
-      noto-fonts-emoji
       roboto
       merriweather
       montserrat
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
       open-sans
-      # notonoto
+      fira-code
+      fira-code-symbols
     ];
 
     fontconfig = {
