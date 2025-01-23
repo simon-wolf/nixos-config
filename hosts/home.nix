@@ -98,6 +98,11 @@
       udisks                # Removable drive manipulation
     ];
 
+    shellAliases = {
+      mongodb-compass = "mongodb-compass --ignore-additional-command-line-flags --password-store='gnome-libsecret'";
+      code = "code --ignore-additional-command-line-flags --password-store='gnome-libsecret'";
+    };
+
     stateVersion = "22.05";
   };
 
