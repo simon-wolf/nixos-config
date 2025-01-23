@@ -20,6 +20,7 @@
       bc                    # Calculator
       btop                  # Resource manager
       cron                  # Command scheduler
+      fastfetch             # System information
       fzf                   # Fuzzy find
       git                   # Git
       jq                    # JSON parser
