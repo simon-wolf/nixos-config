@@ -70,6 +70,7 @@
       _1password-gui
       beekeeper-studio
       chromium
+      dino                  # Jabber/XMPP Client
       firefox 
       gnome-disk-utility
       gnome-obfuscate       # Censor private information in images
