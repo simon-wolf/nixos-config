@@ -163,6 +163,11 @@
     recursive = true;
   };
 
+  home.file.".config/nvim" = {
+    source = ../config/nvim;
+    recursive = true;
+  };
+  
   home.file.".config/pgcli" = {
     source = ../config/pgcli;
     recursive = true;
