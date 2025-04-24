@@ -47,6 +47,7 @@
 	  ]
 	))
 	vim-snipmate
+        vim-snippets
       ];
       
       extraConfig = ''
