@@ -21,6 +21,7 @@
       btop                  # Resource manager
       cron                  # Command scheduler
       fastfetch             # System information
+      fd                    # File finder
       fzf                   # Fuzzy find
       git                   # Git
       jq                    # JSON parser
@@ -32,6 +33,7 @@
       nnn                   # File Manager
       ranger                # File Manager
       restic                # Backup tool
+      ripgrep               # Search tool
       rsync                 # Backup tool
       toot                  # Mastodon client
       tree                  # Directory Listing
