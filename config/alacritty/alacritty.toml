@@ -4,7 +4,7 @@ general.import = ["/home/simon/.config/alacritty/dracula.toml"]
 TERM = "xterm-256color"
 
 [font]
-size = 14.0
+size = 16.0
 
 [font.bold]
 family = "Inconsolata"
