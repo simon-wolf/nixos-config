@@ -86,10 +86,6 @@
 	let gitgutter_map_keys = 0
 	" let g:airline_theme = 'codedark'
       '';
-
-      extraLuaConfig = ''
-        vim.opt.number = true
-     '';
     };
   };
 }
