@@ -18,19 +18,22 @@
       vimAlias = true;
       vimdiffAlias = true;
 
-
       plugins = with pkgs.vimPlugins; [
         fzf-lua
+
         lazygit-nvim
-        nerdtree
+        vim-gitgutter
+        # gitsigns-nvim
+
+	nerdtree
         nerdtree-git-plugin
-	# nvim-treesitter.withAllGrammars
+
         (nvim-treesitter.withPlugins (
-	  plugins: with plugins; [
-	    bash
-	    csv
-	    dockerfile
-	    elixir
+          plugins: with plugins; [
+            bash
+            csv
+            dockerfile
+            elixir
 	    erlang
 	    heex
 	    html
@@ -62,32 +65,13 @@
       ];
       
       extraConfig = ''
-        syntax enable					" Syntax highlighting
-        highlight Comment cterm=italic gui=italic	" Comments are italic
-        set nofoldenable
-        set spelllang=en_gb
-        set nospell
-
-        nnoremap <C-p> :FzfLua files<Cr>
-
         let NERDTreeMinimalUI=1
-
         cabbrev tree NERDTree
 
 	let g:minimap_width = 10
         let g:minimap_auto_start = 1
         let g:minimap_auto_start_win_enter = 1
 	let g:minimap_git_colors = 1
-
-	" Git Gutter
-	highlight GitGutterAdd guifg=#009900 ctermfg=Green
-	highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
-	highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
-	nmap ) <Plug>(GitGutterNextHunk)
-	nmap ( <Plug>(GitHuggerPrevHunk)
-	let g:gitgutter_enabled = 1
-	let gitgutter_map_keys = 0
-	" let g:airline_theme = 'codedark'
       '';
     };
   };
