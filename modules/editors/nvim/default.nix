@@ -18,11 +18,13 @@
       vimAlias = true;
       vimdiffAlias = true;
 
+
       plugins = with pkgs.vimPlugins; [
         fzf-lua
         lazygit-nvim
         nerdtree
         nerdtree-git-plugin
+	# nvim-treesitter.withAllGrammars
         (nvim-treesitter.withPlugins (
 	  plugins: with plugins; [
 	    bash
@@ -36,12 +38,15 @@
 	    jq
 	    json
             latex
+	    lua
             markdown
 	    markdown_inline
             minimap-vim
             nix
 	    python
 	    ssh_config
+	    vim
+	    vimdoc
 	    vim-gitgutter
 	    xml
 	  ]
@@ -68,8 +73,6 @@
         let NERDTreeMinimalUI=1
 
         cabbrev tree NERDTree
-
-        set clipboard+=unnamedplus
 
 	let g:minimap_width = 10
         let g:minimap_auto_start = 1
