@@ -62,6 +62,9 @@
 	# SnipMate
 	vim-snipmate
         vim-snippets
+
+	# Coding
+	comment-nvim
       ];
       
       extraConfig = ''
