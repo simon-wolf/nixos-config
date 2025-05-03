@@ -65,6 +65,9 @@
 
 	# Coding
 	comment-nvim
+
+	# VimWiki
+	vimwiki
       ];
       
       extraConfig = ''
