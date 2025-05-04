@@ -90,6 +90,7 @@
       tdesktop              # Telegram
       # teams
       thunderbird
+      xdg-utils
 
       # LaTeX
       texlive.combined.scheme-full

@@ -1,4 +1,3 @@
-
 -- https://www.reddit.com/r/neovim/comments/1fwqc8t/comment/lqh201n/
 -- DopeBoogie
 -- Filetypes to enable spellcheck
