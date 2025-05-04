@@ -21,6 +21,7 @@
       plugins = with pkgs.vimPlugins; [
         fzf-lua
 
+        # git-related
         lazygit-nvim
         vim-gitgutter
         # gitsigns-nvim
