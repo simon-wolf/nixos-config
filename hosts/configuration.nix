@@ -160,7 +160,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 14d";
+      options = "--delete-older-than 7d";
     };
     package = pkgs.nixVersions.stable;
     extraOptions = "experimental-features = nix-command flakes";
