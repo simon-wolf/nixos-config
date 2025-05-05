@@ -66,6 +66,7 @@
 
 	# Coding
 	comment-nvim
+	nvim-lspconfig
 
 	# VimWiki
 	vimwiki
