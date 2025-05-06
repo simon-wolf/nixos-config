@@ -19,6 +19,10 @@
       vimdiffAlias = true;
 
       plugins = with pkgs.vimPlugins; [
+        # Icons
+	mini-icons
+	nvim-web-devicons
+
         fzf-lua
 
         # git-related
@@ -26,6 +30,8 @@
         vim-gitgutter
         # gitsigns-nvim
 
+        # files
+	oil-nvim
 	nerdtree
         nerdtree-git-plugin
 
