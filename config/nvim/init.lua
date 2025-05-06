@@ -6,9 +6,8 @@ vim.opt.foldenable = false
 -- Show comments in italic
 vim.cmd[[highlight Comment cterm=italic gui=italic]]
 
--- https://github.com/ibhagwan/fzf-lua
--- Remap Ctrl+p to launch the files view 
-vim.api.nvim_set_keymap('n', '<C-p>', ':FzfLua files<Cr>', { noremap = true, silent = true })
+-- Key remapping
+require('keymaps')
 
 -- Disable spellchecking in all but a few file types
 require('spell')
