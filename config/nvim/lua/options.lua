@@ -57,6 +57,7 @@ vim.opt.foldenable = false
 vim.g.vimwiki_conceallevel = 0
 
 -- Show comments in italic
+-- Optional since the Kanagawa theme also does this
 vim.cmd[[highlight Comment cterm=italic gui=italic]]
 
 -- Show some whitespace characters

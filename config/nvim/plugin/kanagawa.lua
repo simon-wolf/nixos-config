@@ -4,6 +4,7 @@ require("kanagawa").setup({
     compile = false,
     -- transparent = true,
     overrides = function(colours)
+        -- https://github.com/rebelot/kanagawa.nvim/issues/207
         return {
             ["@markup.link.url.markdown_inline"] = { link = "Special" }, -- (url)
             ["@markup.link.label.markdown_inline"] = { link = "WarningMsg" }, -- [label]
@@ -15,4 +16,6 @@ require("kanagawa").setup({
     end,
     theme = "wave"
 })
+
+vim.cmd("colorscheme kanagawa")
 
