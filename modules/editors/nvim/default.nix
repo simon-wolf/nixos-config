@@ -75,6 +75,9 @@
         comment-nvim
         nvim-lspconfig
         vim-sleuth # Auto-detect per-file tabs vs spaces and depth
+
+        # Other
+        which-key-nvim # Shows available keybindings
       ];
     };
   };
