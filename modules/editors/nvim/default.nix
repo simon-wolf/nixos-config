@@ -18,9 +18,12 @@
       vimAlias = true;
 
       plugins = with pkgs.vimPlugins; [
+        # Theme
+        kanagawa-nvim
+
         # Icons
-	mini-icons
-	nvim-web-devicons
+        mini-icons
+        nvim-web-devicons
 
         fzf-lua
 
@@ -30,8 +33,8 @@
         # gitsigns-nvim
 
         # files
-	oil-nvim
-	nerdtree
+        oil-nvim
+        nerdtree
         nerdtree-git-plugin
 
         (nvim-treesitter.withPlugins (
@@ -40,52 +43,39 @@
             csv
             dockerfile
             elixir
-	    erlang
-	    heex
-	    html
-	    javascript
-	    jq
-	    json
+            erlang
+            heex
+            html
+            javascript
+            jq
+            json
             latex
-	    lua
+            lua
             markdown
-	    markdown_inline
             minimap-vim
             nix
-	    python
-	    ssh_config
-	    vim
-	    vimdoc
-	    vim-gitgutter
-	    xml
-	  ]
-	))
+            python
+            query
+            ssh_config
+            vim
+            vimdoc
+            vim-gitgutter
+            xml
+          ]
+        ))
 
         # lualine
-	nvim-web-devicons
-	lualine-nvim
+        lualine-nvim
 
-	# SnipMate
-	vim-snipmate
+        # SnipMate
+        vim-snipmate
         vim-snippets
 
-	# Coding
-	comment-nvim
-	nvim-lspconfig
-
-	# VimWiki
-	vimwiki
+        # Editing and Coding
+        comment-nvim
+        nvim-lspconfig
+        vim-sleuth # Auto-detect per-file tabs vs spaces and depth
       ];
-      
-#      extraConfig = ''
-#        let NERDTreeMinimalUI=1
-#        cabbrev tree NERDTree
-#
-#	let g:minimap_width = 10
-#        let g:minimap_auto_start = 1
-#        let g:minimap_auto_start_win_enter = 1
-#	let g:minimap_git_colors = 1
-#      '';
     };
   };
 }

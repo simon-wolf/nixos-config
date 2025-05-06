@@ -19,5 +19,17 @@ vim.cmd[[highlight GitGutterDelete guifg=#ff2222 ctermfg=Red]]
 -- " let g:airline_theme = 'codedark'
 
 -- vimwiki
-require('vimwiki')
+-- require('vimwiki')
 
+-- Select the theme
+vim.cmd("colorscheme kanagawa")
+
+-- extraConfig = ''
+--	 let NERDTreeMinimalUI=1
+--	 cabbrev tree NERDTree
+--
+--	let g:minimap_width = 10
+--  let g:minimap_auto_start = 1
+--    let g:minimap_auto_start_win_enter = 1
+--	let g:minimap_git_colors = 1
+--'';
