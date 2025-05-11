@@ -33,9 +33,11 @@
         # gitsigns-nvim
 
         # files
-        oil-nvim
+        fzf-lua
         nerdtree
         nerdtree-git-plugin
+        oil-nvim
+        project-nvim #Automagically cd to project directory
 
         (nvim-treesitter.withPlugins (
           plugins: with plugins; [
