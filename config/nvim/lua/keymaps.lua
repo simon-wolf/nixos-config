@@ -9,7 +9,8 @@ vim.keymap.set('n', '<leader>fw', '<cmd>FzfLua grep_cword<Cr>', { silent = true,
 vim.keymap.set('n', '<leader>fW', '<cmd>FzfLua grep_cWORD<Cr>', { silent = true, desc = "[F]ind current [W]ORD" })
 vim.keymap.set('n', '<leader>fr', '<cmd>FzfLua resume<Cr>', { silent = true, desc = "[F]ind [R]esume" })
 vim.keymap.set('n', '<leader>fo', '<cmd>FzfLua oldfiles<Cr>', { silent = true, desc = "[F]ind [O]ld Files (last opened)" })
-vim.keymap.set('n', '<leader><leader>', '<cmd>FzfLua buffers<Cr>', { silent = true, desc = "Find buffers" })
+vim.keymap.set('n', '<leader><leader>', '<cmd>FzfLua buffers<Cr>', { silent = true, desc = "[<leader> Find buffers" })
+vim.keymap.set('n', '<leader>/', '<cmd>FzfLua lgrep_curbuf<Cr>', { silent = true, desc = "[/] Live grep the current buffer" })
 
 -- Oil
 vim.keymap.set('n', '-', '<cmd>Oil --float<Cr>', { silent = true, desc = "Open parent directory in Oil" })

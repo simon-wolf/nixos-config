@@ -1,3 +1,6 @@
+-- Change the leader from \ to space
+vim.g.mapleader = " "
+
 -- Show line numbers and make them relative
 vim.opt.number = true
 vim.opt.relativenumber = true
