@@ -25,8 +25,6 @@
         mini-icons
         nvim-web-devicons
 
-        fzf-lua
-
         # git-related
         lazygit-nvim
         vim-gitgutter
@@ -73,15 +71,39 @@
         vim-snipmate
         vim-snippets
 
+        # Miscellaneous
+        which-key-nvim # Shows available keybindings
+
         # Editing and Coding
+        # cmp-nvim-lsp
         comment-nvim
+        fidget-nvim # UI for Neovim notifications and LSP progress messages
         nvim-lspconfig
         vim-sleuth # Auto-detect per-file tabs vs spaces and depth
-
-        # Other
-        which-key-nvim # Shows available keybindings
       ];
-    };
+
+      extraPackages = with pkgs; [
+        # Language servers
+        # elixir-ls
+        lua-language-server
+        nil
+        nixd
+
+        # Formatters
+        nixpkgs-fmt # Nix code formatter for nixpkgs
+        stylua # Opinionated Lua code formatter
+
+        # NOTE: These 'extra' lsp and formatters should be installed on a
+        # per-project basis using nix shell
+
+        # clang-tools
+        # ltex-ls
+        # omnisharp-roslyn
+        # matlab-language-server
+        # prettierd
+        # black
+      ];
+   };
   };
 }
 
