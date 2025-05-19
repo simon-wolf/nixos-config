@@ -14,3 +14,6 @@ vim.keymap.set('n', '<leader>/', '<cmd>FzfLua lgrep_curbuf<Cr>', { silent = true
 
 -- Oil
 vim.keymap.set('n', '-', '<cmd>Oil --float<Cr>', { silent = true, desc = "Open parent directory in Oil" })
+
+-- LSP
+vim.keymap.set('n', 'gl', function() vim.diagnostic.open_float() end, { silent = true, desc = "Open Diagnostics in a floating window" })
