@@ -86,7 +86,7 @@
 
       extraPackages = with pkgs; [
         # Language servers
-        elixir-ls
+        # elixir-ls
         lua-language-server
         marksman # Language server for Markdown
         # nil # Language server for Nix

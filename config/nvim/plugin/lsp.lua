@@ -144,7 +144,9 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
--- require('lspconfig')['elixirls'].setup({})
+require("lspconfig")["elixirls"].setup({
+    cmd = { "elixir-ls" },
+})
 
 require("lspconfig")["lua_ls"].setup({
     -- cmd = { ... },
