@@ -77,20 +77,23 @@
         # Editing and Coding
         # cmp-nvim-lsp
         comment-nvim
+        conform-nvim # Lightweight formatter
         fidget-nvim # UI for Neovim notifications and LSP progress messages
         nvim-lspconfig
+        snacks-nvim # A collection of small QoL plugins for Neovim
         vim-sleuth # Auto-detect per-file tabs vs spaces and depth
       ];
 
       extraPackages = with pkgs; [
         # Language servers
-        # elixir-ls
+        elixir-ls
         lua-language-server
-        nil
-        nixd
+        marksman # Language server for Markdown
+        # nil # Language server for Nix
+        # nixd # Language server for Nix
 
         # Formatters
-        nixpkgs-fmt # Nix code formatter for nixpkgs
+        # nixpkgs-fmt # Nix code formatter for nixpkgs
         stylua # Opinionated Lua code formatter
 
         # NOTE: These 'extra' lsp and formatters should be installed on a
