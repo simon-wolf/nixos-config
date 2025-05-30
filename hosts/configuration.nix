@@ -102,8 +102,8 @@
       VISUAL = "nvim";
     };
     systemPackages = with pkgs; [
-      nano	# Text editor
-      wget      # Retrieve files via HTTP, HTTPS & FTP
+      nano # Text editor
+      wget # Retrieve files via HTTP, HTTPS & FTP
     ];
   };
 
@@ -118,14 +118,10 @@
     enableDefaultPackages = true;
 
     packages = with pkgs; [
-      (nerdfonts.override {
-        fonts = [
-          "Inconsolata"
-          "InconsolataLGC"
-          "JetBrainsMono"
-          "RobotoMono"
-        ];
-      })
+      nerd-fonts.inconsolata
+      nerd-fonts.inconsolata-lgc
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.roboto-mono
       b612
       source-code-pro
       source-sans-pro
@@ -168,7 +164,9 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = lib.optional (pkgs.obsidian.version == "1.4.16") "electron-25.9.0";
+    permittedInsecurePackages = [
+      "beekeeper-studio-5.1.5"
+    ];
   };
 
   system = {

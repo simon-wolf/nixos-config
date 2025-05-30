@@ -83,12 +83,10 @@
       maestral              # Dropbox
       maestral-gui
       ngrok
-      obsidian
       pdfarranger
       signal-desktop
       slack
       tdesktop              # Telegram
-      # teams
       thunderbird
       xdg-utils
 
@@ -117,7 +115,7 @@
 
   services.gpg-agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-curses;
+    pinentry.package = pkgs.pinentry-curses;
     enableScDaemon = false;
   };
   programs.gpg.enable = true;

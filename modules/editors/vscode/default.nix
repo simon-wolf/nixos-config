@@ -44,7 +44,9 @@ in {
   programs = {
     vscode = {
       enable = true;
-      package = vscode_with_extensions;
+      # package = vscode_with_extensions;
+      package = pkgs.vscode;
+      profiles.default.extensions = vscode_extensions;
     };
   };
 }
