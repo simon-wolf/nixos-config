@@ -84,7 +84,7 @@
         comment-nvim
         conform-nvim # Lightweight formatter
         fidget-nvim # UI for Neovim notifications and LSP progress messages
-        nvim-lspconfig
+        # nvim-lspconfig
         snacks-nvim # A collection of small QoL plugins for Neovim
         vim-sleuth # Auto-detect per-file tabs vs spaces and depth
       ];
@@ -93,7 +93,7 @@
         # Language servers
         # elixir-ls
         lua-language-server
-        marksman # Language server for Markdown
+        # marksman # Language server for Markdown
         # nil # Language server for Nix
         # nixd # Language server for Nix
 
