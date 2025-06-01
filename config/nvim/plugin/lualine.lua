@@ -21,7 +21,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics', 'lsp_status'},
-    lualine_c = {
+   lualine_c = {
       {
 	'filename',
 	file_status = true,      -- Displays file status (readonly status, modified status)
