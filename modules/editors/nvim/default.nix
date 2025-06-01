@@ -32,15 +32,13 @@
 
         # files
         fzf-lua
-        neo-tree-nvim
-        #nerdtree
-        #nerdtree-git-plugin
+        # neo-tree-nvim
         oil-nvim
         project-nvim #Automagically cd to project directory
 
         # neo-tree dependencies
         #plenary-nvim
-        image-nvim
+        # image-nvim
 
         (nvim-treesitter.withPlugins (
           plugins: with plugins; [
