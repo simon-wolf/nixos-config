@@ -12,7 +12,7 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+    vim.opt.clipboard = "unnamedplus"
 end)
 
 -- Save undo history
@@ -23,7 +23,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default. This is the column that shows things like Git changes.
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 100
@@ -62,17 +62,16 @@ vim.g.vimwiki_conceallevel = 0
 
 -- Show comments in italic
 -- Optional since the Kanagawa theme also does this
-vim.cmd[[highlight Comment cterm=italic gui=italic]]
+vim.cmd([[highlight Comment cterm=italic gui=italic]])
 
 -- Show some whitespace characters
 -- list enables list mode which shows the characters.
 -- listchars is used to define custom characters to show.
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "»", trail = "·", nbsp = "␣" }
 
 -- When possible, show some lines above and below the cursor to provide some context
 vim.opt.scrolloff = 5
 
 -- Disable the commandline until it is needed which gives a cleaner look and an extra line
 vim.opt.cmdheight = 0
-
