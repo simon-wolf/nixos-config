@@ -68,7 +68,7 @@ vim.cmd([[highlight Comment cterm=italic gui=italic]])
 -- list enables list mode which shows the characters.
 -- listchars is used to define custom characters to show.
 vim.opt.list = true
-vim.opt.listchars = { tab = "»", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- When possible, show some lines above and below the cursor to provide some context
 vim.opt.scrolloff = 5
