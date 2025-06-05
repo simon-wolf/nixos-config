@@ -71,7 +71,8 @@
         lualine-nvim
 
         # SnipMate
-        vim-snipmate
+        nvim-snippy
+        # vim-snipmate
         vim-snippets
 
         # Miscellaneous
