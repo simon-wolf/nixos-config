@@ -117,6 +117,10 @@
     home-manager.enable = true;
   };
 
+  xdg.mimeApps.defaultApplications = {
+    "x-scheme-handler/mid" = "thunderbird.desktop";
+  };
+
   services.gpg-agent = {
     enable = true;
     pinentry.package = pkgs.pinentry-curses;
