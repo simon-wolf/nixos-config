@@ -6,7 +6,7 @@
 #      default.nix
 #      configuration.nix
 #      home.nix
-#         ./starlite2 OR ./starlite4 OR ./desktop
+#         ./starlite4 OR ./thinkpad OR ./desktop
 #            ./default.nix
 #            ./home.nix
 #
@@ -35,6 +35,24 @@ in
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = {
           imports = [(./home.nix)] ++ [(import ./starlite4/home.nix)];
+        };
+      }
+    ];
+  };
+
+  thinkpad = lib.nixosSystem {
+    inherit system;
+    specialArgs = { inherit inputs user location; };
+    modules = [
+      ./thinkpad
+      ./configuration.nix
+
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = { inherit user; };
+        home-manager.users.${user} = {
+          imports = [(./home.nix)] ++ [(import ./thinkpad/home.nix)];
         };
       }
     ];
