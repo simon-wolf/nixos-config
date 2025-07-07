@@ -1,5 +1,5 @@
 #
-# System configuration for starlite4
+# System configuration for thinkpad
 #
 
 { config, pkgs, user, ... }:
