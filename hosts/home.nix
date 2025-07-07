@@ -40,6 +40,8 @@
       wally-cli             # Keyboard firmware flashing tool
 
       # Email
+      meli
+      aerc
       neomutt               # Email
       isync                 # Mail download and local sync (mbsync)
       msmtp                 # Send outgoing email via SMTP
