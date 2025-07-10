@@ -6,8 +6,8 @@
 
 {
   imports =
-    [(import ./hardware-configuration.nix)] ++		# Current hardware config
-    [(import ../../modules/desktop/sway/sway.nix)];	# Window manager
+    [(import ./hardware-configuration.nix)] ++ # Current hardware config
+    [(import ./sway.nix)]; # Window manager
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
