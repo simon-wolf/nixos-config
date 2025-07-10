@@ -3,12 +3,12 @@
 #
 # flake.nix
 #   ./hosts
-#      default.nix
 #      configuration.nix
+#      default.nix
 #      home.nix
-#         ./starlite4 OR ./thinkpad OR ./desktop
-#            ./default.nix
-#            ./home.nix
+#      ./desktop OR ./starlite4 OR ./thinkpad
+#        ./default.nix
+#        ./hardware-configuration.nix
 #
 
 { lib, inputs, nixpkgs, home-manager, system, user, location, ... }:

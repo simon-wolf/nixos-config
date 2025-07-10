@@ -26,6 +26,13 @@
     virt-manager.enable = true;
   };
 
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
+  };
+
   fileSystems."/mnt/pi-nas/shared" = {
     device = "//192.168.10.2/shared";
     fsType = "cifs";
