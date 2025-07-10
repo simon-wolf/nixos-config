@@ -34,7 +34,7 @@ in
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = {
-          imports = [(./home.nix)] ++ [(import ./starlite4/home.nix)];
+          imports = [(./home.nix)];
         };
       }
     ];
@@ -52,7 +52,7 @@ in
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = {
-          imports = [(./home.nix)] ++ [(import ./thinkpad/home.nix)];
+          imports = [(./home.nix)];
         };
       }
     ];
