@@ -23,7 +23,7 @@ let
 
   shared-modules = ([
     ./configuration.nix
-    ./sway.nix
+    ../modules/sway.nix
     home-manager.nixosModules.home-manager {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
