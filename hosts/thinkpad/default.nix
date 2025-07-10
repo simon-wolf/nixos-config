@@ -7,7 +7,7 @@
 {
   imports =
     [(import ./hardware-configuration.nix)] ++ # Current hardware config
-    [(import ./sway.nix)]; # Window manager
+    [(import ../sway.nix)]; # Window manager
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
