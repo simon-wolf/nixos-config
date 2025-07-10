@@ -16,7 +16,7 @@
 
   console = {
     packages = with pkgs; [ terminus_font ];
-    font = "Lat2-Terminus16";
+    font = "ter-i32b";
     earlySetup = true;
     keyMap = "us";
   };
