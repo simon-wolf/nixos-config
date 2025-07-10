@@ -20,6 +20,19 @@ let
   };
 
   lib = nixpkgs.lib;
+
+  shared-modules = ([
+    ./configuration.nix
+    ./sway.nix
+    home-manager.nixosModules.home-manager {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.extraSpecialArgs = { inherit user; };
+      home-manager.users.${user} = {
+        imports = [(./home.nix)];
+      };
+    }
+  ]);
 in
 {
   starlite4 = lib.nixosSystem {
@@ -27,17 +40,7 @@ in
     specialArgs = { inherit inputs user location; };
     modules = [
       ./starlite4
-      ./configuration.nix
-
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit user; };
-        home-manager.users.${user} = {
-          imports = [(./home.nix)];
-        };
-      }
-    ];
+    ] ++ shared-modules;
   };
 
   thinkpad = lib.nixosSystem {
@@ -45,17 +48,7 @@ in
     specialArgs = { inherit inputs user location; };
     modules = [
       ./thinkpad
-      ./configuration.nix
-
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit user; };
-        home-manager.users.${user} = {
-          imports = [(./home.nix)];
-        };
-      }
-    ];
+    ] ++ shared-modules;
   };
 
   desktop = lib.nixosSystem {
@@ -63,17 +56,6 @@ in
     specialArgs = { inherit inputs user location; };
     modules = [
       ./desktop
-      ./configuration.nix
-
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit user; };
-        home-manager.users.${user} = {
-          imports = [(./home.nix)] ++ [(import ./desktop/home.nix)];
-        };
-      }
-    ];
+    ] ++ shared-modules;
   };
-
 }

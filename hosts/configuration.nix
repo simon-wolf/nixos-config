@@ -14,8 +14,12 @@
     defaultLocale = "en_GB.UTF-8";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  console = {
+    packages = with pkgs; [ terminus_font ];
+    font = "Lat2-Terminus16";
+    # earlySetup = true;
+    keyMap = "us";
+  };
 
   hardware =
     let
@@ -49,12 +53,6 @@
       };
     };
 
-  # Run unpatched dynamic libraries
-  programs.nix-ld.enable = true;
-
-  # ZSH
-  programs.zsh.enable = true;
-
   # Podman Virtualisation
   virtualisation = {
     podman = {
@@ -79,6 +77,9 @@
     pulse.enable = true;
   };
 
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
   # udisks2 service
   services.udisks2.enable = true;
 
@@ -86,13 +87,15 @@
   services.gnome.gnome-keyring.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.mutableUsers = true;
-  users.users.${user} = {
-    isNormalUser = true;
-    description = "Simon Wolf";
-    extraGroups = [ "wheel" "video" "audio" "lp" "scanner" "plugdev" "libvirtd"];
-    initialPassword = "password";
-    shell = pkgs.zsh;
+  users = {
+    mutableUsers = true;
+    users.${user} = {
+      isNormalUser = true;
+      description = "Simon Wolf";
+      extraGroups = [ "wheel" "video" "audio" "lp" "scanner" "plugdev" "libvirtd"];
+      initialPassword = "password";
+      shell = pkgs.zsh;
+    };
   };
 
   environment = {
@@ -107,10 +110,18 @@
     ];
   };
 
-  # Start OpenSSH agent at login
   programs = {
     ssh = {
-      startAgent = true;
+      startAgent = true; # Start OpenSSH agent at login
+    };
+    nix-ld = {
+      enable = true; # Run unpatched dynamic libraries
+    };
+    zsh = {
+      enable = true;
+    };
+    light = {
+      enable = true; # Backlight
     };
   };
 

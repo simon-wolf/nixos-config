@@ -5,24 +5,14 @@
 { config, pkgs, user, ... }:
 
 {
-  imports =
-    [(import ./hardware-configuration.nix)] ++ # Current hardware config
-    [(import ../sway.nix)]; # Window manager
+  imports = [ ./hardware-configuration.nix ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
-  console = {
-    packages = with pkgs; [ terminus_font ];
-    font = "Lat2-Terminus16";
-    earlySetup = true;
-    keyMap = "us";
-  };
-
   virtualisation.libvirtd.enable = true;
-
   virtualisation.libvirtd.qemu = {
     # Enable TPM emulation (optional)
 #    swtpm.enable = true;
@@ -33,11 +23,9 @@
   virtualisation.spiceUSBRedirection.enable = true;
 
   programs = {
-    #dconf.enable = true;
-    light.enable = true;
     virt-manager.enable = true;
   };
-  
+
   fileSystems."/mnt/pi-nas/shared" = {
     device = "//192.168.10.2/shared";
     fsType = "cifs";
