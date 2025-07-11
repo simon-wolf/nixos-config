@@ -5,10 +5,6 @@
 { config, lib, pkgs, inputs, user, location, ... }:
 
 {
-  imports =
-    [
-    ];
-
   time.timeZone = "Europe/London";
   i18n = {
     defaultLocale = "en_GB.UTF-8";

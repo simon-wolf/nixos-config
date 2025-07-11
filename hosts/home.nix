@@ -8,7 +8,10 @@
   imports = 
     (import ../modules/editors) ++
     (import ../modules/email) ++
-    (import ../modules/shell);
+    (import ../modules/shell) ++
+    [
+      ./home/alacritty.nix
+    ];
 
   home = {
     username = "${user}";
@@ -16,7 +19,6 @@
 
     packages = with pkgs; [
       # Terminal
-      alacritty             # Terminal emulator
       bc                    # Calculator
       btop                  # Resource manager
       cron                  # Command scheduler
@@ -145,11 +147,6 @@
   home.file.".abcde.conf" = {
     source = ../config/abcde/abcde_lossless_flac.conf;
     recursive = false;
-  };
-
-  home.file.".config/alacritty" = {
-    source = ../config/alacritty;
-    recursive = true;
   };
 
   home.file.".mbsyncrc" = {
