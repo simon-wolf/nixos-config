@@ -3,7 +3,6 @@
 #
 
 { config, fetchurl, libs, pkgs, user, ... }:
-
 {
   imports = 
     (import ../modules/editors) ++
@@ -19,6 +18,7 @@
 
     packages = with pkgs; [
       # Terminal
+      bat                   # Cat(1) clone with syntax highlighting and Git integration
       bc                    # Calculator
       btop                  # Resource manager
       cron                  # Command scheduler

@@ -3,7 +3,6 @@
 #
 
 { config, lib, pkgs, inputs, user, location, ... }:
-
 {
   time.timeZone = "Europe/London";
   i18n = {
