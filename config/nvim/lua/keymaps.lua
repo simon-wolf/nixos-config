@@ -148,3 +148,8 @@ end, { silent = true, desc = "Open Diagnostics in a floating window" })
 vim.keymap.set("n", "<leader>cf", function()
     require("conform").format()
 end, { silent = true, desc = "Format current buffer" })
+
+-- Open links
+vim.keymap.set("n", "<leader>gx", function()
+    vim.api.nvim_feedkeys("0f(gx", "t", false)
+end, { silent = tue, desc = "Open first link in line" })
