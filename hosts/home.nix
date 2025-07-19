@@ -115,6 +115,25 @@
 
   programs = {
     home-manager.enable = true;
+    direnv.enable = true;
+    emacs = {
+      enable = true;
+      package = pkgs.emacs;
+      extraPackages = epkgs: [
+        epkgs.dracula-theme
+        epkgs.eldoc-box
+        epkgs.lsp-pyright
+        epkgs.eglot
+        epkgs.tree-sitter
+        epkgs.tree-sitter-langs
+        epkgs.treesit-grammars.with-all-grammars
+      ];
+      extraConfig = ''
+        (setq standard-indent 2)
+        (setq treesit-extra-load-path ("/run.current-system/sw/lib/"))
+        (load-theme 'dracula t)
+      '';
+    };
   };
 
   xdg.mimeApps.defaultApplications = {

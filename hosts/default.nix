@@ -46,6 +46,7 @@ in
     specialArgs = { inherit inputs user location; };
     modules = [
       ./starlite4
+      ./emacs_keyboard.nix
     ] ++ shared-modules;
   };
 
@@ -54,6 +55,7 @@ in
     specialArgs = { inherit inputs user location; };
     modules = [
       ./thinkpad
+      ./emacs_keyboard.nix
     ] ++ shared-modules;
   };
 
