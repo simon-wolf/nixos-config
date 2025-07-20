@@ -23,6 +23,7 @@
         (setq treesit-extra-load-path ("/run.current-system/sw/lib/"))
         (load-theme 'dracula t)
         (global-set-key [remap list-buffers] 'ibuffer)
+        (set-frame-font "Inconsolata Nerd Font Mono 16" nil t)
       '';
     };
   };
