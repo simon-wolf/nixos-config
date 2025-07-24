@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: blog
+# key: >blog
+# --
+---
+date: ${1:`(format-time-string "%Y-%m-%d")`} 12:00
+title: $2
+categories: ${3:$$(yas-choose-value '("elixir" "health" "latex" "linux" "miscellaneous" "python" "supernote"))}
+---
+
+$4
