@@ -100,6 +100,7 @@
       texstudio
 
       # Other
+      (aspellWithDicts (dicts: with dicts; [ en en-computers en-science ]))
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
       gnome-keyring
