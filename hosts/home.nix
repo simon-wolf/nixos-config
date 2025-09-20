@@ -77,6 +77,7 @@
       _1password-gui
       beekeeper-studio
       chromium
+      digikam               # Photos
       dino                  # Jabber/XMPP Client
       firefox 
       gnome-disk-utility
