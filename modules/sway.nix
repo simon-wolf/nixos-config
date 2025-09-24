@@ -65,8 +65,9 @@ in
 
         # Gnome
         glib				# gsettings
-        dracula-theme			# gtk theme
+        # dracula-theme			# gtk theme
         adwaita-icon-theme	# default gnome cursors
+        gnome-themes-extra  # dark adwaita theme
 
         # Helper utilities
         wl-clipboard			# Command line clipboard for Wayland

@@ -118,6 +118,8 @@ input "1452:613:Apple_Inc._Magic_Trackpad_2" {
 ### Misc Settings
 #
 
+seat "*" xcursor_theme Adwaita 24
+
 font pango: "Inconsolata Nerd Font" 14
 
 # Notification manager
