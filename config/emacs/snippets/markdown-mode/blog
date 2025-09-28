@@ -5,7 +5,8 @@
 ---
 date: ${1:`(format-time-string "%Y-%m-%d")`} 12:00
 title: $2
-categories: ${3:$$(yas-choose-value '("elixir" "health" "latex" "linux" "miscellaneous" "python" "supernote"))}
+categories: ${3:$$(yas-choose-value '("computing" "personal development" "programming" "technology"))}
+tags: ${4:$$(yas-choose-value '("apple", "awk", "commentary", "cycling", "elixir", "emacs", "exercise", "food", "git", "hardware", "latex", "linux", "mental health", "news", "nixos", "physical health", "productivity", "python", "raspberry pi", "running", "social media", "software", "supernote", "tmux", "vim", "zwift"))}
 ---
 
-$4
+$5
