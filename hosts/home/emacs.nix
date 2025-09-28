@@ -21,6 +21,8 @@
       ];
       extraConfig = ''
         (setq standard-indent 2)
+        (tool-bar-mode 0)
+
         (setq treesit-extra-load-path ("/run.current-system/sw/lib/"))
         (load-theme 'dracula t)
         (global-set-key [remap list-buffers] 'ibuffer)
