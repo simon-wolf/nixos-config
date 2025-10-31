@@ -12,11 +12,12 @@
         epkgs.dracula-theme
         epkgs.eldoc-box
         epkgs.lsp-pyright
-        epkgs.eglot
+        # epkgs.eglot
         epkgs.magit
         epkgs.tree-sitter
         epkgs.tree-sitter-langs
         epkgs.treesit-grammars.with-all-grammars
+        # epkgs.use-package
         epkgs.yasnippet
       ];
       extraConfig = ''
@@ -27,6 +28,22 @@
         (load-theme 'dracula t)
         (global-set-key [remap list-buffers] 'ibuffer)
         (set-frame-font "Inconsolata Nerd Font Mono 16" nil t)
+
+        (use-package
+         emacs
+         :ensure nil
+         :custom
+
+         ;; Should use:
+         ;; (mapc #'treesit-install-language-grammar (mapcar #'car treesit-language-source-alist))
+         ;; at least once per installation or while changing this list
+         (treesit-language-source-alist
+          '((heex "https://github.com/phoenixframework/tree-sitter-heex")
+            (elixir "https://github.com/elixir-lang/tree-sitter-elixir")))
+
+         (major-mode-remap-alist
+          '((elixir-mode . elixir-ts-mode)))
+        )
 
         (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
         (yas-global-mode 1)
