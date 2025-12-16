@@ -64,6 +64,7 @@
       flac                  # FLAC audio format library and tools (for abcde)
       mpv                   # Media Player
       pavucontrol           # Audio Control
+      puddletag             # File metadata management
       vlc                   # Media Player
 
       # File Management
