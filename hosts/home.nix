@@ -23,6 +23,7 @@
       bc                    # Calculator
       btop                  # Resource manager
       cron                  # Command scheduler
+      doxx                  # .docx document viewer
       fastfetch             # System information
       fd                    # File finder
       fzf                   # Fuzzy find
@@ -41,6 +42,7 @@
       toot                  # Mastodon client
       tree                  # Directory Listing
       wally-cli             # Keyboard firmware flashing tool
+      xleak                 # Excel viewer
 
       # Email
       meli
