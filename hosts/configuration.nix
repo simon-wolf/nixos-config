@@ -106,9 +106,9 @@
   };
 
   programs = {
-    ssh = {
-      startAgent = true; # Start OpenSSH agent at login
-    };
+    # ssh = {
+    #   startAgent = true; # Start OpenSSH agent at login
+    # };
     nix-ld = {
       enable = true; # Run unpatched dynamic libraries
     };
@@ -137,7 +137,7 @@
       montserrat
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       open-sans
       fira-code
       fira-code-symbols
@@ -171,7 +171,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
-      "beekeeper-studio-5.1.5"
+      "beekeeper-studio-5.3.4"
     ];
   };
 

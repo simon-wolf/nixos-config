@@ -2,13 +2,13 @@
 # Zsh
 #
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   programs = {
     zsh = {
       enable = true;
-      dotDir = ".config/zsh_nix";
+      dotDir = "${config.home.homeDirectory}/.config/zsh_nix";
       # enableAutosuggestions = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;

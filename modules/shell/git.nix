@@ -6,9 +6,9 @@
   programs = {
     git = {
       enable = true;
-      userName = "Simon Wolf";
-      userEmail = "swolf@fastmail.co.uk";
-      extraConfig = {
+      settings = {
+        user.name = "name";
+        user.email = "swolf@fastmail.co.uk";
         pull.rebase = true;
         init.defaultBranch = "main";
       };

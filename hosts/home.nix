@@ -44,21 +44,6 @@
       wally-cli             # Keyboard firmware flashing tool
       xleak                 # Excel viewer
 
-      # Email
-      meli
-      aerc
-      neomutt               # Email
-      isync                 # Mail download and local sync (mbsync)
-      msmtp                 # Send outgoing email via SMTP
-      pass                  # To encrypt credentials
-      pam_gnupg             # PAM module to hand login password to gpg-agent
-      lynx                  # Command-line browser to view HTML emails
-      abook                 # Command-line address book
-      notmuch-mutt          # Index and search mail
-      gnupg                 # Crypto
-      gpg-tui               # Terminal interface for GnuPG
-      pinentry-curses       # GnuPG's interface to passphrase input
-
       # Audio & Video
       abcde                 # CD Ripper
       cdparanoia            # Reads digital audio from CDs (for abcde)
@@ -95,7 +80,6 @@
       pdfarranger
       signal-desktop
       slack
-      tdesktop              # Telegram
       thunderbird
       xdg-utils
 
