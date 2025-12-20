@@ -79,7 +79,7 @@
   services.udisks2.enable = true;
 
   # Gnome keyring
-  services.gnome.gnome-keyring.enable = true;
+  # services.gnome.gnome-keyring.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
@@ -106,9 +106,9 @@
   };
 
   programs = {
-    # ssh = {
-    #   startAgent = true; # Start OpenSSH agent at login
-    # };
+    ssh = {
+      startAgent = true; # Start OpenSSH agent at login
+    };
     nix-ld = {
       enable = true; # Run unpatched dynamic libraries
     };
