@@ -91,6 +91,7 @@
       (aspellWithDicts (dicts: with dicts; [ en en-computers en-science ]))
       bashmount             # Bash script for managing removable media with udisk
       evince                # GNOME document viewer
+      gcr                   # Provides org.gnome.keyring.SystemPrompter
       gnome-keyring
       udisks                # Removable drive manipulation
     ];
@@ -112,13 +113,15 @@
     "x-scheme-handler/mid" = "thunderbird.desktop";
   };
 
-  services.gpg-agent = {
+ services.gpg-agent = {
     enable = true;
     pinentry.package = pkgs.pinentry-curses;
     enableScDaemon = false;
   };
   programs.gpg.enable = true;
 
+  services.gnome-keyring.enable = true;
+ 
 #  systemd.timers = "mbsync-mail-refresh" = {
 #    wantedBy = [ "timers.target" ];
 #    timerConfig = {

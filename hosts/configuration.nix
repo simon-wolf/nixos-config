@@ -120,6 +120,8 @@
     };
   };
 
+  security.pam.services.login.enableGnomeKeyring = true;
+
   fonts = {
     enableDefaultPackages = true;
 
