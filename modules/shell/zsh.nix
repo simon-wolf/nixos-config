@@ -14,6 +14,7 @@
       syntaxHighlighting.enable = true;
       history.size = 10000;                 # Maximum events in internal history
       history.save = 10000;                 # Maximum events in history file
+      history.share = true;
 
       initContent = ''
         # Prompt
