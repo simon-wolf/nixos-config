@@ -14,6 +14,7 @@
         epkgs.lsp-pyright
         # epkgs.eglot
         epkgs.magit
+        epkgs.nix-mode
         epkgs.tree-sitter
         epkgs.tree-sitter-langs
         epkgs.treesit-grammars.with-all-grammars
