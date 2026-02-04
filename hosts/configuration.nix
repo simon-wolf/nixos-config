@@ -105,7 +105,19 @@
     ];
   };
 
+  services.displayManager = {
+    dms-greeter = {
+      enable = true;
+      compositor.name = "niri";
+      configHome = "/home/${user}";
+      # package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    };
+  };
+
   programs = {
+    dms-shell = {
+      enable = true;
+    };
     niri = {
       enable = true;
     };
@@ -176,7 +188,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
-      "beekeeper-studio-5.3.4"
+      "beekeeper-studio-5.5.3"
     ];
   };
 
