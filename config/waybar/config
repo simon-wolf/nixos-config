@@ -5,7 +5,8 @@
     // "width": 1280, // Waybar width
     "spacing":10, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "keyboard-state", "sway/mode", "custom/media", "sway/window"],
+    //"modules-left": ["sway/workspaces", "keyboard-state", "sway/mode", "custom/media", "sway/window"],
+    "modules-left": ["niri/workspaces", "keyboard-state", "custom/media", "niri/window"],
     // "modules-center": ["sway/window"],
     "modules-center": [],
     "modules-right": [
@@ -48,9 +49,9 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
+    // "sway/mode": {
+    //     "format": "<span style=\"italic\">{}</span>"
+    // },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",

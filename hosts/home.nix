@@ -176,6 +176,11 @@
     recursive = false;
   };
 
+  home.file.".config/niri/config.kdl" = {
+    source = ../config/niri/config.kdl;
+    recursive = false;
+  };
+
   home.file.".config/sway/scripts/lower_brightness.sh" = {
     source = ../config/sway/scripts/lower_brightness.sh;
     executable = true;

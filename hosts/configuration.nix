@@ -106,9 +106,12 @@
   };
 
   programs = {
-    ssh = {
-      startAgent = true; # Start OpenSSH agent at login
+    niri = {
+      enable = true;
     };
+    # ssh = {
+    #   startAgent = true; # Start OpenSSH agent at login
+    # };
     nix-ld = {
       enable = true; # Run unpatched dynamic libraries
     };
