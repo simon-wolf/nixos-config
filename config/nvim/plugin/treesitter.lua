@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.config").setup({
     highlight = {
         -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
         enable = true,
@@ -18,5 +18,4 @@ require'nvim-treesitter.configs'.setup {
     --         node_decremental = "grm",
     --     },
     -- }
-}
-
+})
