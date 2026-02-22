@@ -78,8 +78,17 @@
   # udisks2 service
   services.udisks2.enable = true;
 
-  # Gnome keyring
-  # services.gnome.gnome-keyring.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland = {
+      enable = true;
+    };
+    theme = "sddm-sugar-dark";
+    extraPackages = [ pkgs.sddm-sugar-dark ];
+  };
+
+ # Gnome keyring
+  services.gnome.gnome-keyring.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
@@ -102,13 +111,18 @@
     systemPackages = with pkgs; [
       nano # Text editor
       wget # Retrieve files via HTTP, HTTPS & FTP
+      sddm-sugar-dark
+      # catppuccin-sddm.override {
+      #   flavor = "mocha";
+      #   accent = "mauve";
+      # }
     ];
   };
 
   programs = {
-    ssh = {
-      startAgent = true; # Start OpenSSH agent at login
-    };
+    # ssh = {
+    #   startAgent = true; # Start OpenSSH agent at login
+    # };
     nix-ld = {
       enable = true; # Run unpatched dynamic libraries
     };
