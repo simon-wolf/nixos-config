@@ -3,7 +3,14 @@
 #
 
 { config, lib, pkgs, inputs, user, location, ... }:
-{
+let
+  custom-sddm-astronaut = pkgs.sddm-astronaut.override {
+    embeddedTheme = "purple_leaves";
+    themeConfig = {
+      FontSize = "16";
+    };
+  };
+in {
   time.timeZone = "Europe/London";
   i18n = {
     defaultLocale = "en_GB.UTF-8";
@@ -78,13 +85,16 @@
   # udisks2 service
   services.udisks2.enable = true;
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland = {
+  services.displayManager = {
+    sddm = {
       enable = true;
+      wayland.enable = true;
+      extraPackages = with pkgs; [
+        custom-sddm-astronaut
+      ];
+      theme = "sddm-astronaut-theme";
     };
-    theme = "sddm-sugar-dark";
-    extraPackages = [ pkgs.sddm-sugar-dark ];
+    defaultSession = "sway";
   };
 
  # Gnome keyring
@@ -111,11 +121,10 @@
     systemPackages = with pkgs; [
       nano # Text editor
       wget # Retrieve files via HTTP, HTTPS & FTP
-      sddm-sugar-dark
-      # catppuccin-sddm.override {
-      #   flavor = "mocha";
-      #   accent = "mauve";
-      # }
+      custom-sddm-astronaut
+      kdePackages.qtmultimedia
+      kdePackages.qtsvg
+      kdePackages.qtvirtualkeyboard
     ];
   };
 
