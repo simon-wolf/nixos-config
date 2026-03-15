@@ -34,6 +34,13 @@
         nnn = "nnn -e";
         ll = "nnn -de";
       };
+
+      zplug = {
+        enable = true;
+        plugins = [
+          { name = "joshskidmore/zsh-fzf-history-search"; }
+        ];
+      };
     };
   };
 
