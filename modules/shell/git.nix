@@ -11,6 +11,7 @@
         user.email = "swolf@fastmail.co.uk";
         pull.rebase = true;
         init.defaultBranch = "main";
+        fetch.prune = true;
       };
     };
   };
