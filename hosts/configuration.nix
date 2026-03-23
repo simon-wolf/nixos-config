@@ -97,8 +97,9 @@ in {
     defaultSession = "sway";
   };
 
- # Gnome keyring
+  # Gnome keyring
   services.gnome.gnome-keyring.enable = true;
+  services.gnome.gcr-ssh-agent.enable = false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
@@ -129,9 +130,9 @@ in {
   };
 
   programs = {
-    # ssh = {
-    #   startAgent = true; # Start OpenSSH agent at login
-    # };
+    ssh = {
+      startAgent = true; # Start OpenSSH agent at login
+    };
     nix-ld = {
       enable = true; # Run unpatched dynamic libraries
     };
