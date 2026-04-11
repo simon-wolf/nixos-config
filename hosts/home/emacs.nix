@@ -46,8 +46,15 @@
           '((elixir-mode . elixir-ts-mode)))
         )
 
-        (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-        (yas-global-mode 1)
+        (use-package yasnippet
+          :ensure t
+          :hook ((text-mode
+                  prog-mode
+                  conf-mode
+                  snippet-mode) . yas-minor-mode-on)
+          :init
+          (setq yas-snippet-dir '("~/.emacs.d/snippets"))
+          (yas-global-mode 1))
       '';
     };
   };
