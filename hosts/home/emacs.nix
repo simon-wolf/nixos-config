@@ -55,6 +55,18 @@
           :init
           (setq yas-snippet-dir '("~/.emacs.d/snippets"))
           (yas-global-mode 1))
+
+        ;; Associate all org files with org mode
+        (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
+        ;; Make indentation look nicer
+        (add-hook 'org-mode-hook 'org-indent-mode)
+
+        ;; Hide the markers so you just see bold text as BOLD-TEXT and not *BOLD-TEXT*
+        (setq org-hide-emphasis-markers t)
+
+        ;; Wrap the lines in org mode so that things are easier to read
+        (add-hook 'org-mode-hook 'visual-line-mode)
       '';
     };
   };
