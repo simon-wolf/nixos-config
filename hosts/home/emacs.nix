@@ -16,7 +16,7 @@
         epkgs.magit
         epkgs.multiple-cursors
         epkgs.nix-mode
-        epkgs.tranpose-frame
+        epkgs.transpose-frame
         epkgs.tree-sitter
         epkgs.tree-sitter-langs
         epkgs.treesit-grammars.with-all-grammars
