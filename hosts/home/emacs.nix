@@ -58,6 +58,10 @@
           (setq yas-snippet-dir '("~/.emacs.d/snippets"))
           (yas-global-mode 1))
 
+        ;; Improve *Completions* buffer behaviour
+        (setq completion-auto-help 'always)
+        (setq completion-auto-select 'second-tab)
+
         ;; Associate all org files with org mode
         (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
