@@ -191,8 +191,12 @@
     recursive = true;
   };
 
-  home.file.".emacs.d/snippets" = {
-    source = ../config/emacs/snippets;
+  #  home.file.".emacs.d/snippets" = {
+  #  source = ../config/emacs/snippets;
+  #  recursive = true;
+  #  };
+  home.file.".emacs.d" = {
+    source = ../config/emacs;
     recursive = true;
   };
 }
