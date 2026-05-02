@@ -23,6 +23,7 @@
           # epkgs.tree-sitter-langs
           # epkgs.treesit-grammars.with-all-grammars
           # epkgs.use-package
+          treesit-fold
           yasnippet
 
           # Elixir
@@ -34,6 +35,8 @@
             p.tree-sitter-bash
             p.tree-sitter-dockerfile
             p.tree-sitter-elisp
+            p.tree-sitter-elixir
+            p.tree-sitter-heex
             p.tree-sitter-markdown
             p.tree-sitter-markdown-inline
             p.tree-sitter-nix
