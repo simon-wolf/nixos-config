@@ -1,6 +1,11 @@
 (setq standard-indent 2)
 (tool-bar-mode 0)
 
+;; Split windows horizontally: []|[]
+(setq split-width-threshold 1)
+
+(global-set-key (kbd "M-o") 'other-window)
+
 (load-theme 'dracula t)
 (global-set-key [remap list-buffers] 'ibuffer)
 (set-frame-font "Inconsolata Nerd Font Mono 16" nil t)
