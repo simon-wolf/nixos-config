@@ -65,8 +65,8 @@
     (yas-global-mode 1))
 
 ;; Specify a separate custom-file and load it
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+;; (setq custom-file "~/.emacs.d/custom.el")
+;; (load custom-file)
 
 ;; Improve *Completions* buffer behaviour
 (setq completion-auto-help 'always)
