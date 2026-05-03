@@ -1,8 +1,17 @@
-(setq standard-indent 2)
 (tool-bar-mode 0)
+
+;; Show line numbers in text and programming modes
+(add-hook 'text-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+
+;; Show the column number in the mode line (line number is shown by default)
+(setq column-number-mode t)
+
+(setq standard-indent 2)
 
 ;; Split windows horizontally: []|[]
 (setq split-width-threshold 1)
+
 
 (global-set-key (kbd "M-o") 'other-window)
 
