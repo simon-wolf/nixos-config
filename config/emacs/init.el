@@ -19,6 +19,13 @@
 (global-set-key [remap list-buffers] 'ibuffer)
 (set-frame-font "Inconsolata Nerd Font Mono 16" nil t)
 
+;; Spelling
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(setq ispell-program-name "aspell"
+       ispell-dictionary "en_GB-ise-wo_accents")
+
+
 (use-package emacs
   :ensure nil
   ;; :custom
@@ -70,7 +77,7 @@
           conf-mode
           snippet-mode) . yas-minor-mode-on)
   :init
-    (setq yas-snippet-dir '("~/.emacs.d/snippets"))
+    (setq yas-snippet-dir '("~/.config/emacs/snippets"))
     (yas-global-mode 1))
 
 ;; Specify a separate custom-file and load it

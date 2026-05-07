@@ -195,7 +195,7 @@
   #  source = ../config/emacs/snippets;
   #  recursive = true;
   #  };
-  home.file.".emacs.d" = {
+  home.file.".config/emacs" = {
     source = ../config/emacs;
     recursive = true;
   };
