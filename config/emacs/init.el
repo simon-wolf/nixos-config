@@ -25,6 +25,11 @@
 (setq ispell-program-name "aspell"
        ispell-dictionary "en_GB-ise-wo_accents")
 
+;; Org helpers
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
+
 
 (use-package emacs
   :ensure nil
