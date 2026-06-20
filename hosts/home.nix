@@ -181,6 +181,11 @@
     executable = true;
   };
 
+  home.file.".config/sway/scripts/raise_brightness.sh" = {
+    source = ../config/sway/scripts/raise_brightness.sh;
+    executable = true;
+  };
+
   home.file.".config/sway/wallpapers" = {
     source = ../config/sway/wallpapers;
     recursive = true;
