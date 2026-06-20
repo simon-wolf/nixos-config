@@ -139,9 +139,6 @@ in {
     zsh = {
       enable = true;
     };
-    light = {
-      enable = true; # Backlight
-    };
   };
 
   security.pam.services.login.enableGnomeKeyring = true;

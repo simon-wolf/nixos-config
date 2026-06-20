@@ -61,11 +61,11 @@ in
         gnome-themes-extra  # dark adwaita theme
 
         # Helper utilities
-        wl-clipboard			# Command line clipboard for Wayland
-        mako				# Lightweight Wayland notifications daemon
-        light				# Backlight (and other hardware lights) control
-        grim				# Image grabber
-        slurp				# Select area in a Wayland compositor (used for screenshots with grim)
+        wl-clipboard	# Command line clipboard for Wayland
+        mako			  	# Lightweight Wayland notifications daemon
+        brightnessctl	# Backlight (and other hardware lights) control
+        grim			  	# Image grabber
+        slurp			  	# Select area in a Wayland compositor (used for screenshots with grim)
         fuzzel				# Application launcher
       ];
       extraSessionCommands = ''

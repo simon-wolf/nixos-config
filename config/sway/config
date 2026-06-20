@@ -166,7 +166,7 @@ hide_edge_borders both
 # Function Keys
 #
     # Screen brightness
-    bindsym XF86MonBrightnessUp exec light -A 5
+    bindsym XF86MonBrightnessUp exec $HOME/.config/sway/scripts/raise_brightness.sh
     bindsym XF86MonBrightnessDown exec $HOME/.config/sway/scripts/lower_brightness.sh
 
 #
