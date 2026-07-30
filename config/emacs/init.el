@@ -25,10 +25,36 @@
 (setq ispell-program-name "aspell"
        ispell-dictionary "en_GB-ise-wo_accents")
 
+;; === Start Org-Mode configuration ===
+
+;; The main folder for org files
+;;(setq org-directory "~/notes")
+
+;; Make org files look prettier
+(setq org-hide-leading-stars t
+      org-startup-indented t)
+
+;; Syntax highlighting in code blocks
+(setq org-src-fontify-natively t)
+
 ;; Org helpers
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
+
+;; Associate all org files with org mode
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
+;; Hide the markers so you just see bold text as BOLD-TEXT and not *BOLD-TEXT*
+(setq org-hide-emphasis-markers t)
+
+;; Wrap the lines in org mode so that things are easier to read
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+;; Make indentations look nicer
+(add-hook 'org-mode-hook 'org-indent-mode)
+
+;; === End Org-Mode configuration ===
 
 
 (use-package emacs
@@ -92,16 +118,4 @@
 ;; Improve *Completions* buffer behaviour
 (setq completion-auto-help 'always)
 (setq completion-auto-select 'second-tab)
-
-;; Associate all org files with org mode
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-
-;; Make indentation look nicer
-(add-hook 'org-mode-hook 'org-indent-mode)
-
-;; Hide the markers so you just see bold text as BOLD-TEXT and not *BOLD-TEXT*
-(setq org-hide-emphasis-markers t)
-
-;; Wrap the lines in org mode so that things are easier to read
-(add-hook 'org-mode-hook 'visual-line-mode)
 
